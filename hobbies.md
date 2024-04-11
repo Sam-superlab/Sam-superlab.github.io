@@ -5,19 +5,9 @@ title: Hobbies
 ---
 
 # Hobbies
-
-
-## Workshop
-
-## Past Hobbies
-
-
-## My Cat
-
-
 ## Basketball
 
-I have played Basketball for about 12 years and I am now the captain and the coach of my school basketball team. I delve into basketball because it is fantastic when the ball just goes into the basket. This is the link to the basketball team: [Basketball team](https://github.com/Sam-superlab/Sam-superlab.github.io/blob/main/file/Basketball%20Team/Basketball%20Team.md)
+I have played Basketball for about 12 years and I am now the captain and the coach of my school basketball team. I delve into basketball because it is fantastic when the ball just goes into the basket. This is the link to the basketball team: [Basketball team](https://Sam-superlab.github.io/blob/main/file/Basketball-Team/Basketball-Team.md)
 
 ## Workouts
 

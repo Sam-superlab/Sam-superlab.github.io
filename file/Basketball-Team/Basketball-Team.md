@@ -1,5 +1,7 @@
 ---
-dg-publish: true
+layout: page
+permalink: /file/Basketball-Team/index.html
+title: Basketball Team
 ---
 
 Here are some photos of Basketball
