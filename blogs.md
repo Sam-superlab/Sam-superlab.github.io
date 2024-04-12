@@ -13,6 +13,6 @@ title: Blogs
 ## Leave a message
 <br>
 
-{% https://disq.us/t/4ny2wtw.html %} 
+
 
 <br>
