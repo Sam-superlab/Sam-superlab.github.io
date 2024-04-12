@@ -1,0 +1,405 @@
+\documentclass{article}
+
+\usepackage{amsmath, amsthm, amssymb, amsfonts}
+\usepackage{thmtools}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{framed}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tcolorbox}
+
+\colorlet{LightGray}{White!90!Periwinkle}
+\colorlet{LightOrange}{Orange!15}
+\colorlet{LightGreen}{Green!15}
+\colorlet{LightBlue}{Blue!15}
+\colorlet{LightRed}{Red!15}
+
+
+
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Prob}{\mathbb{P}}
+
+\declaretheoremstyle[name=Theorem,]{thmsty}
+\declaretheorem[style=thmsty,numberwithin=section]{theorem}
+\tcolorboxenvironment{theorem}{colback=LightGray}
+
+\declaretheoremstyle[name=Proposition,]{prosty}
+\declaretheorem[style=prosty,numberlike=theorem]{proposition}
+\tcolorboxenvironment{proposition}{colback=LightOrange}
+
+\declaretheoremstyle[name=Definition,]{definsty}
+\declaretheorem[style=definsty,numberlike=theorem]{definition}
+\tcolorboxenvironment{definition}{colback=LightGreen}
+
+\declaretheoremstyle[name=example,]{examsty}
+\declaretheorem[style=examsty,numberlike=theorem]{example}
+\tcolorboxenvironment{example}{colback=LightRed}
+
+\declaretheoremstyle[name=remark,]{Remarksty}
+\declaretheorem[style=Remarksty,numberlike=theorem]{remark}
+\tcolorboxenvironment{remark}{colback=LightBlue}
+
+\setstretch{1.2}
+\geometry{
+    textheight=9in,
+    textwidth=5.5in,
+    top=1in,
+    headheight=12pt,
+    headsep=25pt,
+    footskip=30pt
+}
+
+% ------------------------------------------------------------------------------
+
+\begin{document}
+
+% ------------------------------------------------------------------------------
+% Cover Page and ToC
+% ------------------------------------------------------------------------------
+
+\title{ \normalsize \textsc{}
+		\\ [2.0cm]
+		\HRule{1.5pt} \\
+		\LARGE \textbf{\uppercase{Alegbra}
+		\HRule{2.0pt} \\ [0.6cm] \LARGE{From Linear Algebra to Algebraic Geometry} \vspace*{10\baselineskip}}
+		}
+\date{}
+\author{\textbf{Author} \\ 
+		Sam Ren \\
+		Grinnell College \\
+		\today }
+
+\maketitle
+\newpage
+
+\tableofcontents
+\newpage
+
+% ------------------------------------------------------------------------------
+\section{Introduction}
+
+
+
+
+
+\clearpage
+\section{Fundamentals of Linear Algebra}
+
+	Linear algebra is a branch of mathematics that focuses on the study of vectors, vector spaces, linear mappings, and systems of linear equations. It provides a framework for solving equations that describe lines, planes, and higher-dimensional spaces. Key concepts include matrices, determinants, eigenvalues, and eigenvectors, which are tools for performing linear transformations and solving linear systems. Essential in various scientific and engineering disciplines, linear algebra has applications in computer science, physics, economics, and statistics, offering a fundamental language for understanding and manipulating linear systems and geometrical concepts in many dimensions.
+
+\subsection{Vector spaces and linear transformations}
+\subsubsection{Vectors in $\R^2$}
+\begin{definition}
+	Vectors are elements of Certestain product of sets, more specific ${a\choose b}$ is a vector in $\R^2$.
+\end{definition}
+
+Vector can be used to represent direction and length, we also have some basic operational rules:
+\begin{theorem}
+Vectors follows:
+	\begin{itemize}
+		\item Scaling $\lambda\in \R , \vec{v}:= {v_1\choose v_2},\lambda \vec{v}={\lambda v_1 \choose \lambda v_2}$
+		\item Addition $\vec{v}+\vec{w}={v_1+w_1\choose v_2+w_2}$
+	\end{itemize}
+\end{theorem}
+
+Then $\R^2$ with two operators $(+,\cdot)$ is called vector space $\R^2$.
+
+\subsubsection{Inner Product and Norm in $\R^2$}
+Notice that these definitions are only suitable in $\R^2$
+\begin{definition}
+	The inner product($<\vec{v},\vec{w}>$) of two vector $\vec{v}m\vec{w}$ define as:
+	\begin{equation*}
+		<\vec{v},\vec{w} >=v_1w_1+v_2w_2
+	\end{equation*}
+\end{definition}
+
+\begin{definition}
+	The norm$||\vec{v}||$ of vectors are defined as:
+	\begin{equation*}
+		||\vec{v}||=\sqrt{v_1^2+v_2^2}=\sqrt{<\vec{v},\vec{v}>}
+	\end{equation*}
+\end{definition}
+
+
+\subsubsection{Lines in $\R^2$}
+\begin{definition}
+	Lines in $\R^2$ are sets of points where:
+	\begin{equation*}
+		L=\{\vec{v}\in \R^2| <\vec{n},\vec{v}-\vec{p}>=0 \}
+	\end{equation*}
+	$\vec{n},\vec{p}$ are vectors from orginal point to the points on line $L$. $\vec{n}$ is the normal vector of the line.
+\end{definition}
+
+
+Or equivalently, $L=\{ {x\choose y}\in \R^2 |n_1x+n_1y=\delta    \}$ where $\delta:=<\vec{n},\vec{p}>$.
+
+
+
+
+
+
+
+
+
+\subsubsection{$\R^n$ Vector Space}
+\begin{definition}
+	$\R^n$ is Certestain product of $\R$ for $n$ times. With elements in the form:
+	\begin{equation*}
+		\vec{v}=\begin{pmatrix}
+  v_1 \\
+  v_2 \\
+  \vdots \\
+  v_n
+\end{pmatrix}
+	\end{equation*}
+	If it follows the vector addition and scalar multiplications, then the we call $(\R^n,+,\cdot)$ as a vector space.
+\end{definition}
+
+\begin{remark}
+	$(\R^n,+)$ is an ablian group
+\end{remark}
+
+Ablian group is a commutative group, where addition in ablian group are commutative:
+\begin{equation*}
+	a+b=b+a
+\end{equation*}
+We will discuss the precisely definition of group later, but for now, a group is a set with an operator $(G,+)$ (You should notice that the operator is not restrict to $+$, it can be any binary operator) where elements in $G$ follows:
+\begin{itemize}
+	\item $a+(b+c)=(a+b)+c$, associative
+	\item $a+0=0+a=a$, where $0=\begin{pmatrix}
+  0 \\
+  \vdots \\
+  0
+\end{pmatrix}$
+	\item $a+a^{-1}=a^{-1}+a=0$
+	\item If the group is ablian, then $a+b=b+a$
+\end{itemize}
+
+\begin{remark}
+	$\R^n$ follows compatiable and distribution rules in scalar multiplication($\cdot:\R\times\R^n\to \R^n$):
+	\begin{itemize}
+		\item compatiable: $\lambda\cdot(\mu \cdot v)=(\lambda\cdot \mu)\cdot v$ and $1\cdot v=v$
+		\item distribution laws: $\lambda \cdot (v+w)=\lambda\cdot v+\lambda\cdot w$ and $(\lambda+\mu)\cdot v=\lambda\cdot v+\mu\cdot v$
+	\end{itemize}
+\end{remark}
+
+\begin{definition}
+The unit element in $\R^n$ defined as:
+\begin{equation*}
+	e_1=\begin{pmatrix}
+		1\\
+		0\\
+		\vdots\\
+		0
+	\end{pmatrix},e_2=\begin{pmatrix}
+		0\\
+		1\\
+		\vdots\\
+		0
+	\end{pmatrix},...
+\end{equation*}
+\end{definition}
+
+\begin{theorem}
+	Any vector($\vec{v}=\begin{pmatrix}
+		v_1\\
+		v_2\\
+		\vdots\\
+		v_n
+	\end{pmatrix}\in \R^n$) can be reperesnted by a linear combination:
+	\begin{equation*}
+		\vec{v}=\sum_{j=1}^n v_j\cdot e_j
+	\end{equation*}
+\end{theorem}
+
+
+
+\subsubsection{Linear Subspaces}
+
+
+
+
+
+
+
+
+\subsection{Matrices and determinants}
+
+
+
+
+
+\subsection{Eigenvalues and eigenvectors}
+
+
+
+
+\subsection{Inner product spaces}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\clearpage
+\section{Advanced Linear Algebra}
+\subsection{Spectral theorem}
+\subsection{Jordan canonical form}
+\subsection{Bilinear forms and quadratic forms}
+\subsection{Tensor products}
+
+
+
+
+
+
+
+
+
+
+
+\clearpage
+\section{Introduction to Abstract Algebra}
+
+	Abstract algebra is a branch of mathematics that deals with algebraic structures such as groups, rings, fields, and vector spaces. It focuses on the generalization and abstraction of algebraic concepts, rather than specific number systems. The study of groups explores sets equipped with an operation that combines any two elements to form a third element in a specific manner, while rings and fields extend these concepts to include operations like addition and multiplication. Linear algebra, a subset of abstract algebra, specifically studies vector spaces and linear mappings between these spaces. It includes the study of lines, planes, and subspaces, but is also concerned with properties common to all vector spaces. The connection between linear algebra and abstract algebra lies in the fact that vector spaces are a type of group, and the transformations studied in linear algebra are examples of functions studied in abstract algebra, thus making linear algebra an essential foundation for understanding the broader concepts of abstract algebra.
+
+\subsection{Groups, rings, and fields}
+\subsection{Homomorphisms and isomorphisms}
+\subsection{Introduction to modules}
+\subsection{Category theory basics}
+
+
+
+
+
+
+
+
+
+\clearpage
+\section{Commutative Algebra}
+
+	Commutative algebra is a branch of mathematics that focuses on commutative rings, their ideals, and modules over such rings. This field is a fundamental part of algebraic geometry, as it provides the algebraic foundation for the study of geometric problems.
+
+The connection between commutative algebra and abstract algebra lies in their shared foundational concepts. Abstract algebra deals with algebraic structures like groups, rings, and fields, where the focus is on understanding and abstracting the properties and operations within these structures. Commutative algebra, specifically, studies a particular type of ring --- commutative rings --- where the multiplication operation is commutative.
+
+Thus, commutative algebra can be seen as a specialized area within abstract algebra, where the principles and theories of abstract algebra are applied to a specific subset of algebraic structures. The techniques and theories developed in commutative algebra are essential in many areas of mathematics, including algebraic geometry and number theory, where the structure of commutative rings provides a crucial framework for exploring and solving problems.
+
+
+\subsection{Commutative rings and ideals}
+\subsection{Noetherian and Artinian rings}
+\subsection{Ring homomorphisms and localizations}
+\subsection{Primary decomposition and integral extensions}
+
+
+
+
+
+
+
+
+\clearpage
+\section{Homological Algebra}
+\subsection{Exact sequences and homology}
+\subsection{Projective, injective, and flat modules}
+\subsection{Tensor and Tor, Ext and Hom}
+\subsection{Derived functors}
+
+
+
+
+\clearpage
+\section{Introduction to Algebraic Geometry}
+\begin{abstract}
+	Algebraic geometry is a branch of mathematics that studies geometric structures arising from solutions to algebraic equations and abstract algebraic concepts. It bridges and extends ideas from both geometry and abstract algebra, especially commutative algebra.
+
+The connection between algebraic geometry and commutative algebra is profound and integral. In algebraic geometry, geometric objects called "varieties" are studied, which are solutions to systems of polynomial equations. These varieties can be understood and analyzed using the tools of commutative algebra, specifically the study of commutative rings and their ideals. 
+
+In more technical terms, there is a deep correspondence in algebraic geometry between geometric spaces (varieties) and the commutative rings of functions defined on these spaces. This correspondence is fundamental in the field, allowing for the translation of geometric problems into algebraic terms and vice versa. For instance, properties of geometric objects can be studied through the properties of corresponding commutative rings (like ring homomorphisms reflecting geometric mappings). 
+
+Hence, commutative algebra provides the algebraic framework and tools necessary for many of the key developments and breakthroughs in algebraic geometry, making it a cornerstone of this mathematical field.
+\end{abstract}
+
+\subsection{Affine and projective varieties}
+\subsection{Morphisms of varieties}
+\subsection{Hilbert's Nullstellensatz}
+\subsection{Dimension theory}
+
+
+
+
+
+\clearpage
+\section{Advanced Topics in Algebraic Geometry}
+\subsection{Sheaves and schemes}
+\subsection{Cohomology theories}
+\subsection{Intersection theory}
+\subsection{Riemann-Roch theorem}
+
+
+
+
+
+
+\clearpage
+\section{Applications and Connections}
+\subsection{Algebraic geometry in number theory}
+\subsection{Connections to differential geometry and topology}
+\subsection{Computational aspects and Gr\"{o}bner bases}
+\subsection{Current trends and open problems in algebraic geometry}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+% ------------------------------------------------------------------------------
+% Reference and Cited Works
+% ------------------------------------------------------------------------------
+
+\bibliographystyle{IEEEtran}
+\bibliography{References.bib}
+
+% ------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
