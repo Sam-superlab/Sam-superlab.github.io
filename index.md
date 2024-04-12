@@ -14,7 +14,7 @@ Overall, I am dealing with diverse areas in math, including group theory, number
 
 
 ## My Extracurricular Activities 
-Activity on the common application will not demonstrate how great they are:
+Activity on the words will not demonstrate how great they are:
 - [Community service projects]()
 - [Clubes and Sports team]()
 
