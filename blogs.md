@@ -5,9 +5,9 @@ title: Blogs
 ---
 
 # Academic blog
-- Life is a long way journey
-- 
-- 
-- 
+- [Life is a long way journey]()
+- [Why Math](http://Sam-superlab.github.io/blogs/Blog-Math1st/)
+- []()
+- []()
 
 #

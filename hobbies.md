@@ -11,7 +11,8 @@ I have played Basketball for about 12 years and I am now the captain and the coa
 
 ## Workouts
 
-I started workouts for about 1 year, and when I was in grade 9, I was about 220 pounds and for now I have already lost 50 pounds of weight. The reason why I lost weight is mainly because my dad was sick and obese during COVID-19 isolation. I wanted to help him and engage him so we just losing weight together. Later, instead of becoming a person who only works out for health, I am a bit beyond that. I look forward to doing some natural physique competition. 
+I started workouts for about 1 year, and when I was in grade 9, I was about 220 pounds and for now I have already lost 50 pounds of weight. The reason why I lost weight is mainly because my dad was sick and obese during COVID-19 isolation. I wanted to help him and engage him so we just losing weight together. Later, instead of becoming a person who only works out for health, I am a bit beyond that.
+
 
 ## Chat with me
 
