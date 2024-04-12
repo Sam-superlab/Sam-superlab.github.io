@@ -11,7 +11,7 @@ Sam's Superlab is a team where aims to promote the equality of education globall
 
 - [Chemistry]()
 
-- [Psychology]()
+- [Psychology](https://sam-superlab.github.io/Superlab/Psychology/Psychology-Topics/)
 
 - [Mathematics]()
 

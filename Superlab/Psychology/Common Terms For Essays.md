@@ -1,6 +1,5 @@
 ---
-dg-publish: true
-dg-home: false
+
 ---
 ## Contrast
 Difference between two or more theory

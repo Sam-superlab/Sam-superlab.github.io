@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /file/Superlab/Psychology/index.html
+permalink: /Superlab/Psychology/index.html
 title: Psychology
 ---
 
