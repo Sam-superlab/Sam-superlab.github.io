@@ -2,6 +2,7 @@
 layout: page
 permalink: /blogs/index.html
 title: Blogs
+comments: true
 ---
 
 ## 2024
@@ -13,6 +14,6 @@ title: Blogs
 ## Leave a message
 <br>
 
-
+{% include disqus.html %} 
 
 <br>
