@@ -3,7 +3,7 @@ layout: page
 permalink: /blogs/Blog-Math1st/index.html
 title: Why Math
 ---
-# Why Math $1st$ story
+# Why Math story
 
 During my early years experience, I had totally different concepts and perspectives in Math. These shifting ideas represent the changes that occur in my personal experience and my philosophy of education. Initially, my father introduced me to calculus through a comic to ignite my interest in Math. However, as a primary student. I found it rather tedious compared to the captivating world of physics. This early phase, where mathematics did not resonate with me. 
 
