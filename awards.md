@@ -8,7 +8,7 @@ title: Awards
 
 ## Scholarships
 
-
+$E=mc^2$
 
 ## Competitions (Selected)
 

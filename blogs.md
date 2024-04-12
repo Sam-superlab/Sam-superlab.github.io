@@ -6,7 +6,7 @@ comments: true
 ---
 
 ## 2024
-- [Life is a long way journey]()
+- [Life is a long way journey](http:///Sam-superlab.github.io/blogs/Blog-Lifejourney/)
 - [Why Math](http://Sam-superlab.github.io/blogs/Blog-Math1st/)
 - []()
 - []()
