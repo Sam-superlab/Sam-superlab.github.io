@@ -1,11 +1,9 @@
 ---
 layout: page
 ---
-
-“Wir müssen wissen. Wir werden wissen." (We must know. We will know.)---David Hilbert
-
-
 # About Me
+*“Wir müssen wissen. Wir werden wissen." (We must know. We will know.)---David Hilbert*
+
 Hello! I'm Sam Ren, a high school student at China World Academy. I hope you will know me better through this personal website :) 
 
 
