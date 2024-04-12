@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /blogs/index.html
+permalink: /blogs/Blog-Math1st/index.html
 title: Why Math
 ---
 
