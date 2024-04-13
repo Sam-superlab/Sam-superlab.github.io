@@ -19,6 +19,6 @@ Activity on the words will not demonstrate how great they are:
 - [Clubes and Sports team]()
 
 
-
+$E=mc^2$
 
 
