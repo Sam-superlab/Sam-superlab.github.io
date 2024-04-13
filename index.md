@@ -1,6 +1,6 @@
 ---
 layout: page
-usemathjax: ture
+usemathjax: true
 ---
 # About Me
 *“Wir müssen wissen. Wir werden wissen." (We must know. We will know.)---David Hilbert*
