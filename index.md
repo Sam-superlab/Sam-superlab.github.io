@@ -1,6 +1,5 @@
 ---
 layout: page
-usemathjax: true
 ---
 # About Me
 *“Wir müssen wissen. Wir werden wissen." (We must know. We will know.)---David Hilbert*
@@ -18,8 +17,5 @@ Overall, I am dealing with diverse areas in math, including group theory, number
 Activity on the words will not demonstrate how great they are:
 - [Community service projects]()
 - [Clubes and Sports team]()
-
-
-$E=mc^2$
 
 
