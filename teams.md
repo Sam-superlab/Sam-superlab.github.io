@@ -21,4 +21,6 @@ On this online platform, I gathered and published their study notes and techniqu
 
 - [Mathematics]()
 
+- [中文卷二复习资料](https://Sam-superlab.github.io/file/语文卷二复习资料/)
+
 
