@@ -8,7 +8,7 @@ comments: true
 ## 2024
 - [Life is a long way journey](http:///Sam-superlab.github.io/blogs/Blog-Lifejourney/)
 - [Why Math](http://Sam-superlab.github.io/blogs/Blog-Math1st/)
-- []()
+- [Graph to Memorize in IB physics](http://Sam-superlab.github.io/blogs/Graphs-to-mem/)
 - []()
 
 ## Leave a message
