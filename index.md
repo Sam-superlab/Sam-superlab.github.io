@@ -21,4 +21,3 @@ Activity on the words will not demonstrate how great they are:
 - [Clubes and Sports team]()
 
 
-$$y=x^2$$
