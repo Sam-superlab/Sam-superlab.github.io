@@ -14,10 +14,3 @@ I have done serval research during high school, here is the link
 [Research Experience]()
 Overall, I am dealing with diverse areas in math, including group theory, number theory, cryptography, Quaternions, Riemann surface, philosophy of math, etc.
 
-
-## My Extracurricular Activities 
-Activity on the words will not demonstrate how great they are:
-- [Community service projects]()
-- [Clubes and Sports team]()
-
-
