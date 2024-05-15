@@ -11,7 +11,7 @@ comments: true
 - [Why Math](http://Sam-superlab.github.io/blogs/Blog-Math1st/)
 **May**
 - [IB exam thoughts](http://Sam-superlab.github.io/blogs/Blog-IBlife/)
-- [Study Schedule]()
+- [Study Schedule](http://Sam-superlab.github.io/blogs/Study-schedule/)
 ## Leave a message
 <br>
 
