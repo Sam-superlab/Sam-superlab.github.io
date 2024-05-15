@@ -8,7 +8,6 @@ layout: page
 
 Welcome to my blog! My name is Sam, and I'm planing studying Mathematics at Grinnell College. Originally from China, my lifelong fascination with numbers has not only fueled my academic pursuits but also my dream of becoming a mathematician. Beyond my love for math, I am dedicated to promoting equal access to education, convinced that quality learning should be a universal right. Follow along as I delve into the realms of mathematics, education, and equity, sharing my thoughts and experiences on how these fields intersect and inspire my goals.
 
-
 ## Research Experience
 I have done serval research during high school, here is the link
 [Research Experience]()
