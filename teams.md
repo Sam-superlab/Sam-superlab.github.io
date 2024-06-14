@@ -13,14 +13,4 @@ Hence I created a platform that aims to benefit the whole community by sharing k
 
 On this online platform, I gathered and published their study notes and techniques. I then secured allies such as teachers to help with peer review. We next aimed to express our ideas and beliefs beyond our campus walls by conducting physical and chemical experiments and teaching at nearby schools. By giving these young learners experiences they never had, I hoped to ignite their enthusiasm for STEM subjects, give back to the community, and help raise the next generation of scientists. My leadership and time management skills were cultivated through creating this platform. More importantly, I benefited the community.
 
-- [Physics]()
-
-- [Chemistry]()
-
-- [Psychology](https://Sam-superlab.github.io/Psychology/Psychology-Topics/)
-
-- [Mathematics]()
-
-- [中文卷二复习资料](https://Sam-superlab.github.io/file/语文卷二复习资料/)
-
-
+You can find all notes by this [link](https://ssr-web-sam.vercel.app/)
