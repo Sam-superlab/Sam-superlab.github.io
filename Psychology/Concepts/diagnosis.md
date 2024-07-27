@@ -1,1 +1,0 @@
-The identification of the nature and cause of a disorder.
