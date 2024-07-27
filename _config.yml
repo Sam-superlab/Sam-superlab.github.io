@@ -9,18 +9,14 @@ owner:
   name: Sam Ren
   avatar: Xuyi.png
   bio: 路漫漫其修远兮，吾将上下而求索(The path to truth is long, yet I shall persevere, sparing no effort in my quest.)
-  email: renxuyi@grinnell.edu 
-  # cv: 
-  # Social networking links are used in author-bio sidebar. Update and remove as you like.
-  # twitter: lancecai2002
-    github: Sam-superlab
+  email: renxuyi@grinnell.edu
+  github: Sam-superlab
   # linkedin: https://www.linkedin.com/in/徐毅-任-39161228b
   # scholar: https://scholar.google.com/citations?user=8igSoWgAAAAJ
-  # bilibili: 
+  # bilibili:
   # researchgate: https://www.researchgate.net/profile/Hanlin-Cai
   zhihu: https://www.zhihu.com/people/sam-58-31-28
-  # facebook: caihanlin2002
-    instagram: sam_ren0621
+  instagram: sam_ren0621
   # lastfm:
   # tumblr:
   # For Google Authorship https://plus.google.com/authorship
@@ -50,17 +46,15 @@ links:
     url: /blogs/
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone: China/Beijing
+timezone: Asia/Shanghai
 future: true
 highlighter: rouge
 markdown: kramdown
 # markdown: redcarpet
 # pygments: true
 
-
 # https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title
-
+permalink: /:categories/:title
 
 kramdown:
   auto_ids: true
@@ -76,12 +70,23 @@ kramdown:
   #   coderay_bold_every: 10
   #   coderay_css: class
 
-
 # disqus settings:
 disqus:
   shortname: lancecai
 
 include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "minimal-mistakes.sublime-project", "minimal-mistakes.sublime-workspace"]
-
+exclude:
+  [
+    "lib",
+    "config.rb",
+    "Capfile",
+    "config",
+    "log",
+    "Rakefile",
+    "Rakefile.rb",
+    "tmp",
+    "less",
+    "minimal-mistakes.sublime-project",
+    "minimal-mistakes.sublime-workspace",
+  ]
 # Latest update in 2023/12/10 by Hanlin Cai.
