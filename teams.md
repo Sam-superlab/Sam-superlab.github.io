@@ -21,3 +21,7 @@ This project provides an interactive visualization of the Decision Tree algorith
 ## [python-trading-engine](https://github.com/Sam-superlab/python-trading-engine)
 
 This project is a Python-based trading engine that allows users to simulate and test trading strategies. It provides a flexible framework for implementing various trading algorithms and supports real-time data simulation.
+
+## [Trading-Engine-Example](https://github.com/Sam-superlab/my_algotrading_project)
+
+A comprehensive algorithmic trading platform that supports both financial markets and sports betting, featuring a web-based interface for data analysis, backtesting, and strategy execution.
