@@ -90,3 +90,9 @@ exclude:
     "minimal-mistakes.sublime-workspace",
   ]
 # Latest update in 2023/12/10 by Hanlin Cai.
+
+# existing social media configuration...
+social:
+  # existing social media entries...
+  linkedin: xuyi-ren-39161228b
+  # other social media entries...
