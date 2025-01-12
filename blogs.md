@@ -15,13 +15,11 @@ comments: true
 
 **May**
 
-- [IB exam thoughts](http://Sam-superlab.github.io/blogs/Blog-IBlife/)
-- [Study Schedule](http://Sam-superlab.github.io/blogs/Study-schedule/)
+<!-- - [IB exam thoughts](http://Sam-superlab.github.io/blogs/Blog-IBlife/)
+- [Study Schedule](http://Sam-superlab.github.io/blogs/Study-schedule/) -->
   <br>
 
-**June**
-
-- [An interesting question](http://Sam-superlab.github.io/blogs/Blog-An-interesting-question/)
+<!-- - [An interesting question](http://Sam-superlab.github.io/blogs/Blog-An-interesting-question/) -->
 
 ## Leave a message
 
