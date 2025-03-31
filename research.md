@@ -14,16 +14,14 @@ I am currently pursuing research in mathematics at Grinnell College, focusing on
 
 ## Research Projects
 
-### Previous Research Projects
-
-1. **Number Theory Research**
+**Number Theory Research**
    - [Does Odd perfect number have distinct prime divisors](https://drive.google.com/file/d/16XcEzUU2Xqlh2iT-ZfbouwQFEA1JCf2D/view?usp=sharing)
    - [RSA---an introduction to cryptography](https://drive.google.com/file/d/1mnu6vcKEXj65MGHqFDt0LzDtNKo17fOG/view?usp=drive_link)
 
-2. **Combinatorics Research**
+**Combinatorics Research**
    - [What is the number of possible arrangement of Rubik's cube?](https://drive.google.com/file/d/14DvXasxGDX_dgGELws2b3pUIcQwFHrFn/view?usp=drive_link)
 
-### On-going Research
+**On-going Research**
 
 - Ternary Digits of Powers of 2
 
