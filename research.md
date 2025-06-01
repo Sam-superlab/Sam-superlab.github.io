@@ -30,12 +30,14 @@ I am currently pursuing research in mathematics at Grinnell College, focusing on
 ### Slides and Talks
 - [Quaternion and Maxwell Equations](https://drive.google.com/file/d/1S5aIGYND4M-WAMcrVlejuFb7Bg0bwqK8/view?usp=drive_link)
 
-### Conference Presentations
+- [Ternary Digits of Powers of 2](https://drive.google.com/file/d/1YU9ReWxdKRtcIgHD0BgP8eY_8KhCHYh9/view?usp=drive_link)
 
-- Not yet available.
+### Conferences
+
+- Midwest Panorama of Geometry & Topology conference, 2025
+- 
 
 ### Coming Soon
-- Ternary Digits of Powers of 2
 
 ## Research Collaborations
 
