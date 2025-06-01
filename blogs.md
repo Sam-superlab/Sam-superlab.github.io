@@ -11,8 +11,6 @@ comments: true
   <br>
 
 **March**
-- [Relationships are not just easy](http://Sam-superlab.github.io/blogs/Blog-Relationships/)
-  <br>
 
 
 
