@@ -35,7 +35,7 @@ I am currently pursuing research in mathematics at Grinnell College, focusing on
 ### Conferences
 
 - Midwest Panorama of Geometry & Topology conference, 2025
-- 
+- Mathematical Association of America (MAA) conference, section IOWA, 2025
 
 ### Coming Soon
 
