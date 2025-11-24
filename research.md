@@ -12,6 +12,14 @@ My research interests lie in the areas of combinatorics, graph theory, and numbe
 
 I am currently pursuing research in mathematics at Grinnell College, focusing on theoretical aspects of number theory and their applications.
 
+
+## Publications
+
+### Journal Publications
+
+### Preprints
+- Ren, Xuyi, and Christian Roettger. Ternary Digits of Powers of Two. arXiv:2511.03861, 2025. [arXiv:2511.03861](https://arxiv.org/abs/2511.03861)
+
 ## Research Projects
 
 **Number Theory Research**
