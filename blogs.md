@@ -20,6 +20,7 @@ comments: true
 
 - [Life is a long way journey](http:///Sam-superlab.github.io/blogs/Blog-Lifejourney/)
 - [Why Math](http://Sam-superlab.github.io/blogs/Blog-Math1st/)
+- [Tools for Proof](http://Sam-superlab.github.io/blogs/Tools-for-proof/)
   <br>
 
 <!-- - [IB exam thoughts](http://Sam-superlab.github.io/blogs/Blog-IBlife/)
