@@ -5,9 +5,16 @@ title: Blogs
 comments: true
 ---
 
+## 2026
+
+
+
+
 ## 2025
 
 **April**
+
+- [Proof techniques in abstract algebra](http://Sam-superlab.github.io/blogs/Proof-techniques-in-abstract-algebra/)
   <br>
 
 **March**
