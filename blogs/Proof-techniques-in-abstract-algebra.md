@@ -7,6 +7,14 @@ title: Proof techniques in abstract algebra
 
 ## Proof techniques in abstract algebra
 
+### Basic techniques
+
+>We wish to prove an element is unique
+
+```{Proof}
+We have standard method that assuming there are two elements and we show that they are the same using some assumptions or premises.
+```
+
 ### How to Show Two Binary Structures Are Isomorphic
 
 Let $(S, *)$ and $(S', *')$ be binary algebraic structures.  
