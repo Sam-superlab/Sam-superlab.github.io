@@ -55,7 +55,9 @@
           {% assign sections = body_content | split:'<h2 ' %}
           <div class="page-introduction">{{ sections[0] }}</div>
           {% for section in sections offset:1 %}
-          <section class="content-section" aria-labelledby="{% assign section_id = section | split:'>' | first | split:'id="' | last | split:'"' | first %}{{ section_id }}"><span class="section-count mono" aria-hidden="true">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span><div class="section-body"><h2 {{ section }}</div></section>
+          {% assign section_heading = section | split:'>' | first %}
+          {% assign section_id = section_heading | split:'id="' | last | split:'"' | first %}
+          <section class="content-section{% if page_kind == 'blog' and section_heading contains 'class="timeline-year"' %} blog-year{% endif %}" aria-labelledby="{{ section_id }}"><span class="section-count mono" aria-hidden="true">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span><div class="section-body"><h2 {{ section }}</div></section>
           {% endfor %}
         </article>
       </div>

@@ -741,16 +741,16 @@ h1,h2,h3 {
   font-size:15px;
   color:var(--muted);
 }
-.page-blog .content-section:first-of-type {
+.page-blog .blog-year {
   grid-template-columns:1fr;
   padding:0;
   border:0;
   position:relative;
 }
-.page-blog .content-section:first-of-type>.section-count {
+.page-blog .blog-year>.section-count {
   display:none;
 }
-.page-blog .content-section:first-of-type h2 {
+.page-blog .blog-year h2 {
   font-size:clamp(75px,12vw,165px);
   font-weight:500;
   letter-spacing:-.09em;
@@ -758,7 +758,7 @@ h1,h2,h3 {
   color:var(--ink);
   line-height:1;
 }
-.page-blog .content-section:first-of-type h3 {
+.page-blog .blog-year h3 {
   font:400 10px/1.5 var(--mono);
   letter-spacing:.08em;
   text-transform:uppercase;
@@ -768,30 +768,30 @@ h1,h2,h3 {
   margin:15px 0 35px;
   color:var(--muted);
 }
-.page-blog .content-section:first-of-type h3:before {
+.page-blog .blog-year h3:before {
   content:'';
   width:7px;
   height:7px;
   background:var(--accent);
   border-radius:50%;
 }
-.page-blog .content-section:first-of-type ul {
+.page-blog .blog-year ul {
   list-style:none;
   padding:0;
   margin:0;
   counter-reset:post;
 }
-.page-blog .content-section:first-of-type li {
+.page-blog .blog-year li {
   padding:0;
   margin:0;
   counter-increment:post;
   position:relative;
   border-top:1px solid var(--line);
 }
-.page-blog .content-section:first-of-type li:last-child {
+.page-blog .blog-year li:last-child {
   border-bottom:1px solid var(--line);
 }
-.page-blog .content-section:first-of-type li>a {
+.page-blog .blog-year li>a {
   display:grid;
   grid-template-columns:84px 1fr 35px;
   align-items:center;
@@ -804,7 +804,7 @@ h1,h2,h3 {
   position:relative;
   transition:background .25s,padding .25s,color .25s;
 }
-.page-blog .content-section:first-of-type li>a:before {
+.page-blog .blog-year li>a:before {
   content:'0' counter(post);
   font:400 36px/1 var(--display);
   color:#302c23;
@@ -818,29 +818,29 @@ h1,h2,h3 {
   box-shadow:4px 4px 0 #0000000c;
   transition:transform .35s;
 }
-.page-blog .content-section:first-of-type li:nth-child(2)>a:before {
+.page-blog .blog-year li:nth-child(2)>a:before {
   background:var(--lilac);
   transform:rotate(5deg);
 }
-.page-blog .content-section:first-of-type li:nth-child(3)>a:before {
+.page-blog .blog-year li:nth-child(3)>a:before {
   background:#d9a57c;
   transform:rotate(-3deg);
 }
-.page-blog .content-section:first-of-type li>a:after {
+.page-blog .blog-year li>a:after {
   content:'↗';
   font:300 30px var(--display);
   justify-self:end;
   color:var(--muted);
   transition:transform .3s;
 }
-.page-blog .content-section:first-of-type li>a:hover {
+.page-blog .blog-year li>a:hover {
   padding-left:16px;
   background:var(--panel);
 }
-.page-blog .content-section:first-of-type li>a:hover:before {
+.page-blog .blog-year li>a:hover:before {
   transform:rotate(0) translateY(-4px);
 }
-.page-blog .content-section:first-of-type li>a:hover:after {
+.page-blog .blog-year li>a:hover:after {
   transform:translate(4px,-4px);
   color:var(--accent);
 }
@@ -1369,29 +1369,29 @@ h1,h2,h3 {
   .page-research .content-section:first-of-type h3 {
     font-size:25px;
   }
-  .page-blog .content-section:first-of-type h2 {
+  .page-blog .blog-year h2 {
     font-size:100px;
   }
-  .page-blog .content-section:first-of-type h3 {
+  .page-blog .blog-year h3 {
     font-size:9px;
     margin-bottom:25px;
   }
-  .page-blog .content-section:first-of-type li>a {
+  .page-blog .blog-year li>a {
     grid-template-columns:58px minmax(0,1fr) 20px;
     gap:17px;
     font-size:19px;
     min-height:122px;
     padding:20px 3px 20px 0;
   }
-  .page-blog .content-section:first-of-type li>a:before {
+  .page-blog .blog-year li>a:before {
     width:54px;
     height:70px;
     font-size:26px;
   }
-  .page-blog .content-section:first-of-type li>a:after {
+  .page-blog .blog-year li>a:after {
     font-size:25px;
   }
-  .page-blog .content-section:first-of-type li>a:hover {
+  .page-blog .blog-year li>a:hover {
     padding-left:8px;
   }
   .page-blog .content-section+ .content-section {
