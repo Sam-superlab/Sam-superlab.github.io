@@ -10,15 +10,7 @@ comments: true
 
 Personal reflections on mathematics, learning, and life, arranged by date.
 
-## 2026 {#year-2026}
-{: .timeline-year }
-
-### November
-
-- [When Love Ends, Does It Ever Truly Finish? · 爱结束了，就真的结束了吗？](/blogs/when-love-ends/)
-
-## 2024 {#section}
-{: .timeline-year }
+## 2024
 
 ### April
 
