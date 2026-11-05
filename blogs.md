@@ -10,7 +10,8 @@ comments: true
 
 Personal reflections on mathematics, learning, and life, arranged by date.
 
-## 2024
+## 2024 {#section}
+{: .timeline-year }
 
 ### April
 

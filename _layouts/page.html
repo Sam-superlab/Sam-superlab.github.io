@@ -39,7 +39,7 @@
             </div>
           {% when 'blog' %}
             <p class="section-label mono"><span>06 / {{ page.title }}</span><span class="label-line"></span></p>
-            <h1 id="{{ heading_id }}">The open<br><em>notebook.</em></h1>
+            <h1 id="{{ heading_id }}">Blog</h1>
             <p class="masthead-note">Thoughts, collected along the way</p>
           {% else %}
             <h1 id="{{ heading_id }}">{{ page.title }}</h1>
@@ -50,12 +50,23 @@
       </header>
       {% if page_kind == 'article' and page.url contains '/blogs/' %}<a class="article-back mono" href="{{ '/blogs/' | relative_url }}">← Back to the notebook</a>{% endif %}
       <div class="reading-layout">
-        <aside class="page-index" aria-label="On this page"><p class="mono">On this page <span>↓</span></p><nav class="section-index" aria-label="Page sections"></nav><span class="index-ornament" aria-hidden="true">✳</span></aside>
+        {% if route contains '/blogs/' %}
+          <aside class="page-index blog-index" aria-label="On this page" hidden>
+            <details class="blog-index-details">
+              <summary>On this page</summary>
+              <nav class="section-index" aria-label="Blog sections"></nav>
+            </details>
+          </aside>
+        {% else %}
+          <aside class="page-index" aria-label="On this page"><p class="mono">On this page <span>↓</span></p><nav class="section-index" aria-label="Page sections"></nav><span class="index-ornament" aria-hidden="true">✳</span></aside>
+        {% endif %}
         <article class="article-wrap" aria-label="{{ page.title | escape }}">
           {% assign sections = body_content | split:'<h2 ' %}
           <div class="page-introduction">{{ sections[0] }}</div>
           {% for section in sections offset:1 %}
-          <section class="content-section" aria-labelledby="{% assign section_id = section | split:'>' | first | split:'id="' | last | split:'"' | first %}{{ section_id }}"><span class="section-count mono" aria-hidden="true">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span><div class="section-body"><h2 {{ section }}</div></section>
+          {% assign section_heading = section | split:'>' | first %}
+          {% assign section_id = section_heading | split:'id="' | last | split:'"' | first %}
+          <section class="content-section{% if page_kind == 'blog' and section_heading contains 'class="timeline-year"' %} blog-year{% endif %}" aria-labelledby="{{ section_id }}"><span class="section-count mono" aria-hidden="true">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span><div class="section-body"><h2 {{ section }}</div></section>
           {% endfor %}
         </article>
       </div>
