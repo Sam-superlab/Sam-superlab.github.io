@@ -2,51 +2,44 @@
 layout: page
 permalink: /research/index.html
 title: Research
+description: Mathematical research, preprints, talks, and projects by Xuyi (Sam) Ren.
+last_updated: "2026-11-04"
 ---
 
-# Research Interests
+# Research
 
-My research interests lie in the areas of combinatorics, graph theory, and number theory. I am particularly fascinated by the elegant patterns and structures that emerge in these mathematical fields.
+My research interests are in algebraic geometry and commutative algebra.
 
-## Current Research
+## Mentored Advanced Project
 
-I am currently pursuing research in mathematics at Grinnell College, focusing on theoretical aspects of number theory and their applications.
+### Strong Persistence Property (SPP)
 
+As part of Grinnell's [Mentored Advanced Project (MAP)](https://www.grinnell.edu/about/leadership/offices-services/dean/maps) program, I worked with my mentor, [Jennifer Kenkel](https://www.grinnell.edu/user/kenkeljennifer), on the strong persistence property (SPP) in commutative algebra.
 
-## Publications
+For mathematical background on SPP and powers of ideals, see Jürgen Herzog and Ayesha Asloob Qureshi's [Persistence and stability properties of powers of ideals](https://doi.org/10.1016/j.jpaa.2014.05.011), also available as an [open preprint](https://arxiv.org/abs/1208.4684).
 
-### Journal Publications
+## Preprint
 
-### Preprints
-- Ren, Xuyi, and Christian Roettger. Ternary Digits of Powers of Two. arXiv:2511.03861, 2025. [arXiv:2511.03861](https://arxiv.org/abs/2511.03861)
+Christian Roettger and Xuyi Ren. *Ternary Digits of Powers of Two*. arXiv:2511.03861, 2025. [Read the preprint](https://arxiv.org/abs/2511.03861).
 
-## Research Projects
+The paper investigates the distribution of digit strings in the base-three expansions of powers of two and of log₃(2). It presents computational evidence supporting uniform distribution; the underlying conjectures remain open.
 
-**Number Theory Research**
-   - [Does Odd perfect number have distinct prime divisors](https://drive.google.com/file/d/16XcEzUU2Xqlh2iT-ZfbouwQFEA1JCf2D/view?usp=sharing)
-   - [RSA---an introduction to cryptography](https://drive.google.com/file/d/1mnu6vcKEXj65MGHqFDt0LzDtNKo17fOG/view?usp=drive_link)
+## Mathematical Projects and Expository Writing
 
-**Combinatorics Research**
-   - [What is the number of possible arrangement of Rubik's cube?](https://drive.google.com/file/d/14DvXasxGDX_dgGELws2b3pUIcQwFHrFn/view?usp=drive_link)
+- [Distinct Prime Divisors of Odd Perfect Numbers](https://drive.google.com/file/d/16XcEzUU2Xqlh2iT-ZfbouwQFEA1JCf2D/view): a project on odd perfect numbers and their prime divisors.
+- [RSA: An Introduction to Cryptography](https://drive.google.com/file/d/1mnu6vcKEXj65MGHqFDt0LzDtNKo17fOG/view): an introduction to the RSA cryptosystem.
+- [Counting Rubik's Cube Configurations](https://drive.google.com/file/d/14DvXasxGDX_dgGELws2b3pUIcQwFHrFn/view): an exploration of a combinatorial counting problem.
 
-**On-going Research**
+## Presentation Slides
 
-- Ternary Digits of Powers of 2
+- [Quaternions and Maxwell's Equations](https://drive.google.com/file/d/1S5aIGYND4M-WAMcrVlejuFb7Bg0bwqK8/view)
+- [Ternary Digits of Powers of Two](https://drive.google.com/file/d/1YU9ReWxdKRtcIgHD0BgP8eY_8KhCHYh9/view)
 
-## Research Presentations & Seminars
+## Conferences
 
-### Slides and Talks
-- [Quaternion and Maxwell Equations](https://drive.google.com/file/d/1S5aIGYND4M-WAMcrVlejuFb7Bg0bwqK8/view?usp=drive_link)
+- Midwest Panorama of Geometry and Topology, 2025
+- Mathematical Association of America, Iowa Section conference, 2025
 
-- [Ternary Digits of Powers of 2](https://drive.google.com/file/d/1YU9ReWxdKRtcIgHD0BgP8eY_8KhCHYh9/view?usp=drive_link)
+## Contact
 
-### Conferences
-
-- Midwest Panorama of Geometry & Topology conference, 2025
-- Mathematical Association of America (MAA) conference, section IOWA, 2025
-
-### Coming Soon
-
-## Research Collaborations
-
-I am open to research collaborations and discussions in my areas of interest. Feel free to reach out through my [LinkedIn](https://www.linkedin.com/in/xuyi-ren-39161228b/) or email at renxuyi@grinnell.edu.
+I welcome discussions about mathematics and possible collaborations. Reach me at [renxuyi@grinnell.edu](mailto:renxuyi@grinnell.edu) or on [LinkedIn](https://www.linkedin.com/in/xuyi-ren-39161228b/).

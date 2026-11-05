@@ -1,31 +1,61 @@
 ---
 layout: page
 permalink: /blogs/Graphs-to-mem/index.html
-title: Graphs to Memorize in IB physics
+title: Reading Graphs in Physics
+description: How to interpret gradients and areas under force and acceleration graphs.
 ---
 {% include mathjax.html %}
-## Graph Tips(General)
-- Identify and think about the quantity on each axis
-- Pay attention to units and powers of 10
-- Assign meaning to the gradient of the graph and the area under the curve-use units to help(eg. Gradient has units=$\frac{y}{x}$)
 
-### Graph Tips---Gradients
-The gradient of a graph represents the instantaneous rate of change of $y$ with $x$, denote as $\frac{\Delta x}{\Delta y}$
+# Reading Graphs in Physics
 
->Example: $F=\frac{\Delta P}{\Delta t}$
+Before interpreting a graph, identify the quantity on each axis, its units, and any scale factors. The axes determine what the gradient and the area represent.
 
-### Force vs. Distance
-Area under the curve = Work
+## Gradients
 
-### Acceleration vs. Distance
+For a graph of $$y$$ against $$x$$, the average rate of change over an interval is
 
-Area under curve=$\frac{\text{Work}}{\text{mass}}$
+$$
+\frac{\Delta y}{\Delta x}.
+$$
 
-### Force vs. time(Important)
-Area under the curve = Impulse
+The instantaneous rate of change is the tangent's gradient, $$dy/dx$$.
 
->Impulse = $F\Delta t=\Delta p$
+For example, the gradient of a momentum–time graph is the net force:
 
-![image](images/附件/F-vs-t-graph.png)
+$$
+F_{\mathrm{net}}=\frac{dp}{dt}.
+$$
 
+Over a time interval, $$\Delta p/\Delta t$$ gives the average net force. Always check the units: momentum divided by time has the units of force.
 
+## Force Against Displacement
+
+In one-dimensional motion, the signed area under a force–displacement graph is the work done by that force:
+
+$$
+W=\int_{x_1}^{x_2}F(x)\,dx.
+$$
+
+Use the force component along the direction of displacement. Areas below the horizontal axis contribute negative work.
+
+## Acceleration Against Displacement
+
+For one-dimensional motion with constant mass, the signed area under an acceleration–displacement graph is net work per unit mass:
+
+$$
+\int_{x_1}^{x_2}a(x)\,dx
+=\frac{W_{\mathrm{net}}}{m}
+=\frac{v_2^2-v_1^2}{2}.
+$$
+
+Here the horizontal axis is displacement, not time. An acceleration–time graph instead gives the change in velocity through its signed area.
+
+## Force Against Time
+
+The signed area under a net force–time graph is the impulse, equal to the change in momentum:
+
+$$
+J=\int_{t_1}^{t_2}F_{\mathrm{net}}(t)\,dt=\Delta p.
+$$
+
+For a constant net force, this becomes $$J=F_{\mathrm{net}}\Delta t$$. For a varying force, use the integral or the average force over the interval.

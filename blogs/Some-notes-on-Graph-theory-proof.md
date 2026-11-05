@@ -1,84 +1,75 @@
 ---
 layout: page
 permalink: /blogs/Some-notes-on-Graph-theory-proof/index.html
-title: Some Notes on Graph Theory Proof
+title: Notes on Graph Theory Proofs
+description: Examples of induction, contradiction, construction, and extremal arguments in graph theory.
 ---
 {% include mathjax.html %}
 
-## Some Notes on Graph Theory Proof
+# Notes on Graph Theory Proofs
 
-### 1. Basic Graph Theory Concepts
+These notes concern finite, simple, undirected graphs. A graph $$G=(V,E)$$ consists of a vertex set and an edge set. It is connected if every pair of vertices can be joined by a path. The degree $$\deg(v)$$ is the number of edges incident to $$v$$.
 
-A graph $G = (V, E)$ consists of a set of vertices $V$ and a set of edges $E$. Understanding the fundamental definitions is crucial for constructing proofs in graph theory.
+## 1. Induction on Vertices or Edges
 
->**Definition**: A graph is **connected** if there exists a path between any two vertices.
+Example: Every tree with $$n\ge1$$ vertices has exactly $$n-1$$ edges.
 
->**Definition**: The **degree** of a vertex $v$, denoted $\deg(v)$, is the number of edges incident to $v$.
+Proof: A one-vertex tree has no edges. For the inductive step, let $$T$$ be a tree with $$n\ge2$$ vertices. Choose a simple path of maximum length. An endpoint cannot have a neighbor outside the path, because that would extend it, or a neighbor elsewhere on the path other than the next vertex, because that would create a cycle. Thus the endpoint is a leaf.
 
-### 2. Common Proof Techniques in Graph Theory
+Remove this leaf and its incident edge. The remaining graph is connected and has no cycles, so it is a tree on $$n-1$$ vertices. By induction it has $$n-2$$ edges. Restoring the removed edge gives $$n-1$$ edges in $$T$$.
 
-#### 2.1 Proof by Induction on the Number of Vertices or Edges
+## 2. Proof by Contradiction
 
-Many graph theory proofs use induction on the number of vertices $n$ or edges $m$.
+Example: A tree has exactly one simple path between any two distinct vertices.
 
->**Example**: Prove that every tree with $n$ vertices has exactly $n-1$ edges.
+Proof: Connectivity supplies at least one path. Suppose there were two distinct simple paths between the same vertices. Starting at their first divergence and following them until their next meeting produces a cycle. A tree has no cycles, so two such paths cannot exist.
 
-**Proof**: We proceed by induction on the number of vertices $n$.
+## 3. Proof by Construction
 
-- **Base case**: For $n=1$, a tree with one vertex has $0 = 1-1$ edges. ✓
-- **Inductive step**: Assume the statement holds for all trees with $k$ vertices, where $k < n$. Consider a tree $T$ with $n$ vertices. Since $T$ is a tree, it has at least one leaf (a vertex of degree 1). Remove this leaf and its incident edge to obtain a tree $T'$ with $n-1$ vertices. By the inductive hypothesis, $T'$ has $(n-1)-1 = n-2$ edges. Therefore, $T$ has $(n-2)+1 = n-1$ edges. ✓
+Example: For every $$n\ge3$$, there is a graph on $$n$$ vertices that is $$2$$-connected but not $$3$$-connected.
 
-#### 2.2 Proof by Contradiction
+A graph is $$k$$-connected if it has more than $$k$$ vertices and remains connected after deleting any set of fewer than $$k$$ vertices.
 
-This technique is useful when proving properties that must hold for all graphs of a certain type.
+Proof: Choose the cycle $$C_n$$. Deleting any one vertex leaves a path, so $$C_n$$ is $$2$$-connected. For $$n\ge4$$, deleting two nonadjacent vertices separates the remaining vertices into two nonempty paths, so $$C_n$$ is not $$3$$-connected. For $$n=3$$, the graph has only three vertices and therefore fails the size requirement for $$3$$-connectivity.
 
+Deleting two adjacent vertices from a cycle leaves a connected path; it does not provide the required disconnection.
 
-#### 2.3 Proof by Construction
+## 4. Extremal Arguments
 
-This technique involves explicitly constructing a graph or structure that satisfies the desired properties.
+Choose an object that maximizes or minimizes a useful quantity, then use that choice to constrain the graph.
 
->**Example**: Prove that for any $n \geq 3$, there exists a graph with $n$ vertices that is $2$-connected but not $3$-connected.
+Example: In any nonempty finite graph, there is a vertex $$v$$ such that at least half its neighbors have degree at most $$\deg(v)$$.
 
-**Proof**: Consider the cycle graph $C_n$ with $n$ vertices. This graph is $2$-connected (removing any single vertex leaves a connected graph), but it is not $3$-connected (removing two adjacent vertices disconnects the graph).
+Proof: Choose a vertex of maximum degree. Every neighbor has degree at most $$\deg(v)$$, so all its neighbors satisfy the condition. The statement also holds if the vertex is isolated.
 
-#### 2.4 Proof by Extremal Principle（Upper bound or lower bound）
+Longest simple paths, shortest cycles, and vertices of maximum or minimum degree are common starting points. Be precise about the object: in a graph with a cycle, walks can be arbitrarily long, so a “longest walk” need not exist.
 
-This technique involves considering an extremal object (maximum, minimum, etc.) and showing that it must have certain properties.
+## 5. Two Useful Counting Results
 
->**Example**: Prove that in any graph, there exists a vertex $v$ such that at least half of its neighbors have degree at most $\deg(v)$.
+### Handshaking Lemma
 
-**Proof**: Consider a vertex $v$ of maximum degree. For any neighbor $u$ of $v$, we have $\deg(u) \leq \deg(v)$ by the maximality of $v$. Therefore, all neighbors of $v$ have degree at most $\deg(v)$, which is certainly at least half.
+For a finite graph,
 
->Some tricks involve setting the minial cycle, and remove one edge, some may involve setting the maximum length of walk and construct a longer one. 
+$$
+\sum_{v\in V}\deg(v)=2|E|.
+$$
 
-### 3. Important Theorems and Their Proof Strategies
+Count incidences between vertices and edges. Each edge has two endpoints and therefore contributes two to the degree sum.
 
-#### 3.1 Handshaking Lemma
+### Euler's Formula
 
->**Theorem**: In any graph, $\sum_{v \in V} \deg(v) = 2|E|$.
+For a connected graph embedded in the plane, let $$v$$, $$e$$, and $$f$$ denote its numbers of vertices, edges, and faces, including the unbounded face. Then
 
-**Proof Strategy**: Count the number of edge-vertex incidences in two ways. Each edge contributes 2 to the sum of degrees (one for each endpoint).
+$$
+v-e+f=2.
+$$
 
-#### 3.2 Euler's Formula (for planar graphs)
+Proof strategy: If the graph is a tree, then $$e=v-1$$ and $$f=1$$. Otherwise, remove an edge on a cycle. This preserves connectivity and merges its two incident faces, decreasing both $$e$$ and $$f$$ by one. Repeat until a tree remains. Each removal preserves $$v-e+f$$, so the tree case establishes the formula.
 
->**Theorem**: For a connected planar graph with $V$ vertices, $E$ edges, and $F$ faces, we have $V - E + F = 2$.
+## 6. A Proof Checklist
 
-**Proof Strategy**: Use induction on the number of edges, considering cases based on whether the graph contains cycles.
-
-### 4. Tips for Graph Theory Proofs
-
-1. **Draw diagrams**: Visual representations often reveal key insights.
-2. **Consider special cases**: Trees, cycles, complete graphs, and bipartite graphs often serve as building blocks.
-3. **Use invariants**: Properties like the sum of degrees, number of components, or chromatic number can be powerful tools.
-4. **Consider the complement**: Sometimes it's easier to prove something about the complement graph.
-5. **Use extremal arguments**: Consider vertices or edges with maximum or minimum degrees.
-
-### 5. Common Pitfalls to Avoid
-
-- Assuming all graphs are connected without stating it.
-- Forgetting to handle edge cases (empty graphs, graphs with one vertex, etc.).
-- Confusing necessary and sufficient conditions.
-- Not clearly defining what "removing a vertex" or "removing an edge" means in the context of the proof.
-
-
-
+- State assumptions such as finiteness, simplicity, and connectivity.
+- Check small graphs and boundary cases.
+- Explain why a deletion or construction preserves the properties you need.
+- Distinguish paths from walks and necessary conditions from sufficient ones.
+- Draw examples to develop an argument, then justify the claim for every graph covered by the statement.

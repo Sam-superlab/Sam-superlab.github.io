@@ -1,27 +1,17 @@
 ---
 layout: page
 permalink: /teams/index.html
-title: Teams
+title: Projects
+description: Sam's Superlab, an educational resource-sharing project created by Xuyi (Sam) Ren.
+last_updated: "2026-11-04"
 ---
 
-## [Sam's Superlab(notes)](https://ssr-web-sam.vercel.app/)
+# Projects
 
-Sam-Superlab is an online platform I created with the mission to make quality educational resources accessible to all students. On the platform, I gathered a team of students from diverse disciplines to share their study notes, techniques, and insights across various subjects. These materials are peer-reviewed by teachers to ensure accuracy and usefulness.
+## Sam's Superlab
 
-Our goal is simple: to democratize access to knowledge and empower students, especially those in underserved communities, by providing them with the tools they need to succeed academically.You can find all notes by this [link](https://ssr-web-sam.vercel.app/)
+I created Sam's Superlab to help students share study notes, techniques, and insights across subjects. The platform brings together student contributors from different disciplines, with teachers reviewing materials for accuracy and usefulness.
 
-## [Machine-Learning-Visualization---K-Means-Clustering](https://ml-visualization-kmeans.streamlit.app)
+My goal is to make study resources easier to access, especially for students in underserved communities.
 
-This project provides an interactive visualization of the K-Means clustering algorithm, allowing users to understand how the algorithm works through dynamic visual feedback. The application is built using Python, Streamlit, and Plotly, and it supports various initialization methods and datasets.
-
-## [Decision-Tree-Visualization](https://github.com/Sam-superlab/Decision-Tree-Visualizer)
-
-This project provides an interactive visualization of the Decision Tree algorithm, allowing users to understand how the algorithm works through dynamic visual feedback. The application is built using Python, Streamlit, and Plotly, and it supports various initialization methods and datasets.
-
-## [python-trading-engine](https://sam-trade.streamlit.app)
-
-This project is a Python-based trading engine that allows users to simulate and test trading strategies. It provides a flexible framework for implementing various trading algorithms and supports real-time data simulation.
-
-## [Trading-Engine-System](https://github.com/Sam-superlab/my_algotrading_project)
-
-A comprehensive algorithmic trading platform that supports both financial markets and sports betting, featuring a web-based interface for data analysis, backtesting, and strategy execution.
+[Browse the study resources](https://ssr-web-sam.vercel.app/).

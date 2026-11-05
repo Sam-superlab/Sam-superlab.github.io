@@ -1,0 +1,11 @@
+/* Same-origin pages use the browser's crossfade when supported. */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
+
+  ::view-transition-group(root) {
+    animation-duration: 180ms;
+    animation-timing-function: ease-out;
+  }
+}

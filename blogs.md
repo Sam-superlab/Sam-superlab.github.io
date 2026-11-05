@@ -1,50 +1,23 @@
 ---
 layout: page
 permalink: /blogs/index.html
-title: Blogs
+title: Blog
+description: Personal reflections on mathematics, learning, and life by Xuyi (Sam) Ren.
 comments: true
 ---
 
-## 2026
+# Blog
 
-
-
-
-## 2025
-
-**April**
-
-- [Proof techniques in abstract algebra](http://Sam-superlab.github.io/blogs/Proof-techniques-in-abstract-algebra/)
-
-- [Proof techniques in analysis](http://Sam-superlab.github.io/blogs/Proof-techniques-in-analysis/)
-  <br>
-
-**March**
-<br>
-
+Personal reflections on mathematics, learning, and life, arranged by date.
 
 ## 2024
 
-**April**
+### April
 
-- [Life is a long way journey](http:///Sam-superlab.github.io/blogs/Blog-Lifejourney/)
-- [Why Math](http://Sam-superlab.github.io/blogs/Blog-Math1st/)
-- [Tools for Proof](http://Sam-superlab.github.io/blogs/Tools-for-proof/)
-  <br>
+- [Reflections on Finishing the IB](/blogs/Blog-IBlife/)
+- [A Personal Journey](/blogs/Blog-Lifejourney/)
+- [Why Mathematics?](/blogs/Blog-Math1st/)
 
-<!-- - [IB exam thoughts](http://Sam-superlab.github.io/blogs/Blog-IBlife/)
-- [Study Schedule](http://Sam-superlab.github.io/blogs/Study-schedule/) -->
-  <br>
-
-
-
-<!-- - [An interesting question](http://Sam-superlab.github.io/blogs/Blog-An-interesting-question/) -->
-
-## Leave a message
-
-<br>
+## Leave a Message
 
 {% include disqus.html %}
-
-<br>
-

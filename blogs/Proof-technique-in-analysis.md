@@ -2,361 +2,190 @@
 layout: page
 permalink: /blogs/Proof-techniques-in-analysis/index.html
 title: Proof Techniques in Analysis
+description: Inequalities, index choices, and nested intervals for introductory real analysis proofs.
 ---
 {% include mathjax.html %}
 
-## Proof Techniques in Analysis
+# Proof Techniques in Analysis
 
-In general, the technique and language we use in analysis is essentially different than those in algebra, $\varepsilon, \delta$ language, etc.
+These notes collect techniques for introductory real analysis: estimating errors, choosing indices, and constructing limits. They assume familiarity with sequences, limits, and the definitions of continuity and differentiability.
 
-The purpose of this note is to summarize some common techniques and constructions we use in analysis.
+Try a problem yourself before consulting the notes. When you get stuck, identify the quantity you need to control and the assumptions available to control it.
 
-I don't recommand who are taking analysis to read this note, it is better to frustrate first and then ask for help.
+## Common Inequalities
 
-### Common Inequalities in Analysis
+### Triangle and Reverse Triangle Inequalities
 
-Inequalities are the core technical tool in analysis.  
-They are used to control errors, dominate expressions, and connect abstract definitions (limits, continuity, convergence) to concrete estimates.
+For real or complex numbers $$x,y$$,
 
-Most analysis proofs reduce to **choosing the correct inequality at the correct moment**.
+$$
+|x+y|\le |x|+|y|,
+\qquad
+\big||x|-|y|\big|\le |x-y|.
+$$
 
----
+The triangle inequality separates an error into manageable parts. The reverse triangle inequality helps transfer estimates to absolute values. For instance, if $$x_n\to x$$, then
 
-#### Triangle Inequality
+$$
+\big||x_n|-|x|\big|\le |x_n-x|\to0.
+$$
 
-For any real (or complex) numbers $x,y$,
-\\\[
-|x+y| \le |x| + |y|.
-\\\]
+### Cauchy–Schwarz Inequality
 
-More generally, for any $x,y$,
-\\\[
-\big||x| - |y|\big| \le |x-y|.
-\\\]
+For $$x,y\in\mathbb{R}^n$$ with the Euclidean norm,
 
-**Typical use cases:**
-- Splitting an error term
-- Proving uniqueness of limits
-- Bounding expressions in $\varepsilon$-proofs
+$$
+|x\cdot y|\le\|x\|_2\|y\|_2.
+$$
 
-```{Proof Strategy}
-Rewrite the quantity you want to bound as a sum or difference,
-then apply the triangle inequality to separate terms.
-````
+This bounds an inner product by the product of two norms. It is useful for estimating sums and proving continuity of linear maps in finite-dimensional spaces.
 
----
+A separate useful scalar estimate is
 
-#### Reverse Triangle Inequality
+$$
+|ab|\le\frac{a^2+b^2}{2}.
+$$
 
-For all $x,y$,
-\\\[
-\big||x| - |y|\big| \le |x-y|.
-\\\]
+It follows by expanding $$(\lvert a\rvert -\lvert b\rvert )^2\ge0$$.
 
-**Key idea:**
-Distances cannot increase under absolute values.
+### Arithmetic–Geometric Mean Inequality
 
-**Typical use cases:**
+For nonnegative real numbers $$a_1,\ldots,a_n$$, with $$n\ge1$$,
 
-* Showing convergence of $|x_n|$
-* Proving continuity of $|\cdot|$
-* Lower bounds in limit arguments
-
----
-
-#### Cauchy–Schwarz Inequality
-
-For vectors $x,y \in \mathbb{R}^n$,
-\\[
-|x \cdot y| \le |x|,|y|.
-\\]
-
-In $\mathbb{R}$, this reduces to
-\\[
-|xy| \le \tfrac{1}{2}(x^2 + y^2).
-\\]
-
-**Typical use cases:**
-
-* Controlling products
-* Bounding integrals or sums
-* Norm estimates
-
-```{Proof Strategy}
-Use Cauchy–Schwarz to replace a product by a sum of squares,
-which are easier to control.
-```
-
----
-
-#### AM–GM Inequality
-
-For nonnegative real numbers $a,b$,
-\\[
-\sqrt{ab} \le \frac{a+b}{2}.
-\\]
-
-More generally, for $a_1,\dots,a_n \ge 0$,
-\\[
+$$
 \left(\prod_{i=1}^n a_i\right)^{1/n}
-\le \frac{1}{n}\sum_{i=1}^n a_i.
-\\]
+\le\frac{1}{n}\sum_{i=1}^n a_i.
+$$
 
-**Typical use cases:**
+In particular, $$\sqrt{ab}\le(a+b)/2$$ for $$a,b\ge0$$. This converts some product estimates into sum estimates.
 
-* Bounding nonlinear expressions
-* Simplifying products into sums
-* Error estimates
+### Bernoulli's Inequality
 
----
+For $$x\ge-1$$ and an integer $$n\ge1$$,
 
-#### Bernoulli’s Inequality
+$$
+(1+x)^n\ge1+nx.
+$$
 
-For $x \ge -1$ and $n \in \mathbb{N}$,
-\\[
-(1+x)^n \ge 1 + nx.
-\\]
+This gives a simple lower bound for a power and can help compare growth rates.
 
-**Typical use cases:**
+### Mean Value Estimate
 
-* Exponential estimates
-* Convergence of sequences
-* Comparing growth rates
+Let $$a<b$$ and let $$f:[a,b]\to\mathbb{R}$$ be continuous on $$[a,b]$$ and differentiable on $$(a,b)$$. If $$\lvert f'(t)\rvert \le M$$ throughout $$(a,b)$$, the mean value theorem gives
 
----
+$$
+|f(x)-f(y)|\le M|x-y|
+\qquad\text{for all }x,y\in[a,b].
+$$
 
-#### Mean Value Inequality (Derived from MVT)
+Thus a uniform bound on the derivative gives Lipschitz continuity, and hence uniform continuity, on this interval.
 
-If $f$ is differentiable on an interval and $|f'(x)| \le M$, then
-\\[
-|f(x) - f(y)| \le M |x-y|.
-\\]
+### Young's Inequality with a Parameter
 
-**Interpretation:**
-A bounded derivative implies Lipschitz continuity.
+For $$a,b\ge0$$ and $$\varepsilon>0$$,
 
-**Typical use cases:**
+$$
+ab\le\varepsilon a^2+\frac{b^2}{4\varepsilon}.
+$$
 
-* Proving continuity
-* Showing uniform continuity
-* Estimating function differences
+This follows from
 
----
+$$
+\left(\sqrt{\varepsilon}\,a-\frac{b}{2\sqrt{\varepsilon}}\right)^2\ge0.
+$$
 
-#### Young’s Inequality (Two-Term Version)
+The parameter lets you make the coefficient of one squared term small while allowing the other coefficient to grow.
 
-For $a,b \ge 0$ and $\varepsilon > 0$,
-\\[
-ab \le \varepsilon a^2 + \frac{1}{4\varepsilon} b^2.
-\\]
+### Bounding a Product
 
-**Key idea:**
-Trade one term for another with a tunable parameter.
+If $$x_n\to0$$ and $$(y_n)$$ is bounded, choose $$M\ge0$$ such that $$\lvert y_n\rvert \le M$$ for every $$n$$. Then
 
-**Typical use cases:**
+$$
+|x_ny_n|\le M|x_n|\to0.
+$$
 
-* Absorbing error terms
-* Balancing inequalities
-* Functional analysis arguments
+The bound must be independent of $$n$$. More generally, track which variables a constant depends on before treating it as fixed.
 
----
+### Splitting Small and Large Values
 
-#### Bounding by Constants
+The bounds
 
-If $x_n \to 0$ and $(y_n)$ is bounded, then
-\\[
-x_n y_n \to 0.
-\\]
+$$
+|x|\le\max\{1,|x|\},
+\qquad
+1+|x|\le2\max\{1,|x|\}
+$$
 
-**Underlying inequality:**
-\\[
-|x_n y_n| \le |x_n| \cdot \sup |y_n|.
-\\]
+can combine the cases $$\lvert x\rvert \le1$$ and $$\lvert x\rvert >1$$. This is useful when one estimate behaves differently near zero and far from zero.
 
-**Typical use cases:**
+## Choosing a Single Index
 
-* Product limits
-* Series estimates
-* Error control
+Suppose $$P(n)$$ holds for every $$n\ge N_1$$ and $$Q(n)$$ holds for every $$n\ge N_2$$. Set
 
----
+$$
+N=\max\{N_1,N_2\}.
+$$
 
-#### Max–Min Trick
+For every $$n\ge N$$, both conditions hold. The same argument works for any finite collection of eventual conditions.
 
-For any real numbers $a,b$,
-\\[
-|a| \le \max{|a-b|,|b|} + |b|.
-\\]
+### Example: The Sum of Two Convergent Sequences
 
-More commonly,
-\\[
-|x| \le \max{1,|x|}.
-\\]
+Suppose $$x_n\to x$$ and $$y_n\to y$$. Given $$\varepsilon>0$$, choose $$N_1$$ such that $$\lvert x_n-x\rvert <\varepsilon/2$$ for $$n\ge N_1$$, and $$N_2$$ such that $$\lvert y_n-y\rvert <\varepsilon/2$$ for $$n\ge N_2$$.
 
-**Typical use cases:**
+For $$n\ge\max\{N_1,N_2\}$$,
 
-* Piecewise estimates
-* Splitting cases
-* Uniform bounds
+$$
+|(x_n+y_n)-(x+y)|
+\le|x_n-x|+|y_n-y|
+<\varepsilon.
+$$
 
----
+This proves $$x_n+y_n\to x+y$$. The index can depend on $$\varepsilon$$, but it must work for every subsequent $$n$$.
 
-### Strategic Advice
+## Constructing Sequences
 
-* Inequalities are **tools** the construction is still your business
-* Always ask: *what needs to be small?*
-* Replace complicated expressions with **simpler upper bounds**.
-* Constants do not matter unless explicitly stated.
+New sequences often come from sums, products, absolute values, or subsequences. Relate the new expression to estimates you already know.
 
-In analysis, **control beats exactness**.
+For example, to control a product near its proposed limit, write
 
----
+$$
+|x_ny_n-xy|
+\le |x_n|\,|y_n-y|+|y|\,|x_n-x|.
+$$
 
-### Meta-Rule (Very Important)
+If $$(x_n)$$ converges, it is bounded. This reduces the product limit to two terms that tend to zero.
 
-If you are stuck in an $\varepsilon$–proof:
+For a subsequence $$(x_{n_k})$$, remember that its indices must be strictly increasing. In particular, $$n_k\ge k$$, so eventual bounds for the original sequence also apply to the subsequence.
 
-> Rewrite the goal as an inequality involving $|x - L|$
-> and ask which inequality allows you to bound it.
+## Nested Intervals
 
-Most proofs fail because the **wrong inequality** is chosen, not because of algebraic mistakes.
+Let $$I_n=[a_n,b_n]$$ be nonempty closed, bounded intervals in $$\mathbb{R}$$ such that
 
+$$
+I_1\supseteq I_2\supseteq I_3\supseteq\cdots,
+\qquad b_n-a_n\to0.
+$$
 
----
+Then the intersection contains exactly one point.
 
-### Index Control Techniques
+### Why It Works
 
-Many arguments in analysis fail not because of algebraic mistakes, but because of poor control of indices.
-A recurring theme is that when multiple conditions must hold simultaneously, we must synchronize them using a single index.
+The left endpoints are nondecreasing and bounded above by $$b_1$$. By completeness, $$x=\sup\{a_n:n\ge1\}$$ exists. For any fixed $$n$$, nesting implies that every $$a_k\le b_n$$, so $$a_n\le x\le b_n$$. Hence $$x\in I_n$$ for every $$n$$.
 
----
+If $$x$$ and $$y$$ both lie in every interval, then $$\lvert x-y\rvert \le b_n-a_n$$ for every $$n$$. Since the lengths tend to zero, $$x=y$$.
 
-#### The Max Index Trick
+### Using the Construction
 
-This is one of the most frequently used techniques in analysis.
+1. Choose a nonempty closed, bounded interval containing possible candidates.
+2. Construct a nested sequence of nonempty closed subintervals that preserves the property you need.
+3. Show that their lengths tend to zero.
+4. Check that the point in their intersection has the desired property.
 
-The typical situation is that we have two (or more) statements of the following form:
-\\[
-\exists N_1 \in \mathbb{N} \text{ such that } P(n) \text{ holds for all } n \ge N_1,
-\\]
-\\[
-\exists N_2 \in \mathbb{N} \text{ such that } Q(n) \text{ holds for all } n \ge N_2.
-\\]
+Closedness and boundedness support the existence argument; shrinking lengths give uniqueness. Without shrinking lengths, an intersection may still exist but contain more than one point. Without closedness, even nested bounded intervals of shrinking length can have an empty intersection, as with $$(0,1/n)$$.
 
-To make both conditions hold at the same time, we define
-\\[
-N := \max{N_1, N_2}.
-\\]
+## Before Finishing a Proof
 
-Then, for every ( n \ge N ), both ( P(n) ) and ( Q(n) ) hold automatically, since ( n \ge N_1 ) and ( n \ge N_2 ).
-
-This construction is not a trick in the casual sense; it is a structural necessity.
-Whenever two asymptotic conditions appear in the same argument, the max index is unavoidable.
-
-Typical situations where this appears include:
-
-* Comparing two convergent sequences
-* Proving uniqueness of limits
-* Showing that sums or products of sequences converge
-* Synchronizing multiple ( \varepsilon )-conditions
-
-As a mental rule:
-If you see two limits or two error bounds in the same proof, you should expect to take a maximum.
-
----
-
-### Constructing New Sequences from Old Ones
-
-In analysis, we rarely study sequences in isolation. Instead, we construct new sequences from old ones and control their behavior using known estimates.
-
-Common constructions include
-\\[
-(x_n + y_n), \quad (x_n y_n), \quad (|x_n|), \quad (x_{n_k}).
-\\]
-
-The guiding principle is that new expressions must be bounded using inequalities applied to the original sequences.
-
-For example, when studying the convergence of ( x_n + y_n ), one does not attempt to analyze the expression directly. Instead, one rewrites
-\\[
-|(x_n + y_n) - (x + y)| \le |x_n - x| + |y_n - y|.
-\\]
-
-Each term is then controlled separately, and the max index trick is used to synchronize the bounds.
-
-This pattern appears so frequently that it should be treated as automatic.
-
----
-
-### Nested Interval Technique
-
-The nested interval technique is a construction method rather than a single theorem.
-It is used to prove existence results when the object cannot be written down explicitly.
-
-The idea is to construct a sequence of closed intervals
-\\[
-I_1 \supseteq I_2 \supseteq I_3 \supseteq \cdots
-\\]
-with the following properties:
-
-1. Each interval ( I_n ) is closed and bounded.
-2. The intervals are nested.
-3. The lengths satisfy ( |I_n| \to 0 ).
-
-Under these conditions, there exists a unique point
-\\[
-x \in \bigcap_{n=1}^{\infty} I_n.
-\\]
-
----
-
-#### General Process
-
-The nested interval method always follows the same logical structure.
-
-First, choose an initial closed interval ( I_1 ) that contains all possible candidates.
-
-Next, assuming ( I_n ) has been constructed, define a smaller closed interval ( I_{n+1} \subseteq I_n ) that preserves the desired property.
-
-Then, ensure that the length of the intervals tends to zero, usually by construction.
-
-Finally, define the desired object as the unique point in the intersection of all intervals.
-
----
-
-#### Why the Method Works
-
-Closed and bounded intervals in ( \mathbb{R} ) are compact.
-Nested closed sets with shrinking diameter must have a nonempty intersection.
-Shrinking length guarantees uniqueness.
-
-This technique is the conceptual engine behind:
-
-* Completeness of ( \mathbb{R} )
-* Bolzano–Weierstrass
-* Cantor’s intersection theorem
-* Binary and decimal expansions of real numbers
-
----
-
-### Common Failure Modes
-
-Nested interval arguments fail if any of the following are overlooked:
-
-* Intervals are not closed
-* Intervals are not bounded
-* Lengths do not shrink to zero
-* Existence is confused with uniqueness
-
-If any of these conditions fail, the conclusion does not follow.
-
----
-
-### Meta-Observation
-
-A large fraction of undergraduate analysis proofs are built from the same three components:
-
-* One inequality
-* One index synchronization using a maximum
-* One compactness or completeness principle
-
-Everything else is bookkeeping.
+- State the domain and hypotheses of each inequality or theorem you use.
+- In an $$\varepsilon$$ argument, make each choice after the quantities it depends on have been fixed.
+- Check that bounds intended to be uniform do not depend on the varying index or point.
+- Separate existence from uniqueness: they may require different arguments.

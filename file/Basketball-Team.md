@@ -1,13 +1,12 @@
 ---
 layout: page
 permalink: /file/Basketball-Team/index.html
-title: Basketball Team
+title: Basketball
+description: Sam Ren's interest in basketball and experience with his school team.
 ---
 
-Here are some photos of Basketball
-<div class="Fourth">
-<img src="/images/附件/IMG_4955.jpg">
-<img src="/images/附件/IMG_4967.jpg">
-<img src="/images/附件/IMG_4966.jpg">
-<img src="/images/附件/IMG_4965.jpg">
-</div>
+# Basketball
+
+I enjoy basketball and have served as captain and coach of my school team.
+
+Read more about my interests on the [hobbies page](/hobbies/).

@@ -1,28 +1,21 @@
 ---
 layout: page
 permalink: /awards/index.html
-title: Awards
+title: Honors and Awards
+description: Selected academic honors and competition awards received by Xuyi (Sam) Ren.
+last_updated: "2026-11-04"
 ---
 
+# Honors and Awards
 
+## Academic Honors
 
-## Scholarships
-- The Rensselaer Medal
+- Rensselaer Medal
+- Dean's List, Fall 2024
+- Outstanding Student Award, Academic Summit for Young Leaders, 2023
 
-## Competitions (Selected)
-- AMC National 3rd Place
-- MK National Bronze Medal
-- Physic Bowl competition Honorable Award
+## Selected Competition Awards
 
-(MK, AMC, etc. are math competitions)
-
-
-## Honors
-- Outstanding student Award (2023) of academic summit for young leaders
-- Dean's List 2024Fall
-
-
-
-
-
-
+- AMC — national third place
+- MK — national bronze medal
+- Physics Bowl competition — honorable award

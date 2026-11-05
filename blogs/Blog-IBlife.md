@@ -1,10 +1,20 @@
 ---
 layout: page
 permalink: /blogs/Blog-IBlife/index.html
-title: Some thoughts about life 
+title: Reflections on Finishing the IB
+description: Reflections on preparation, rest, and learning after three years in the IB program.
 ---
-{% include mathjax.html %}
-最近终于结束了我三年的IB生涯。不管是在考试前的一切压力和不安还是考试途中的迷茫，可以肯定的说这半个月绝对是最煎熬的日子。正所谓轻舟已过万重山，现在正是那样的感觉。
-但是学习不会因为一次考试而结束，我在这段时间学到的最重要的事情就是---小考小玩，大考大玩，不考不玩。只有平时认真的学习了才会在面对考试时有松弛感.
 
-Recently, I finally ended my three-year IB career. Whether it is all the pressure and uneasiness before the exam or the confusion on the way to the exam, it is certain that this half month is definitely the most painful day. As the saying goes, the canoe has passed thousands of mountains, and now it feels like that. But study will not end with an exam. The most important thing I learned during this period is to play in the small exam, play in the big exam, and don't play in the exam. Only when you study hard at ordinary times will you feel relaxed in the face of the exam.
+# Reflections on Finishing the IB
+
+## 中文
+
+最近终于结束了我三年的 IB 生涯。无论是考试前的压力和不安，还是考试过程中的迷茫，这半个月都是一段难熬的日子。如今终于有了“轻舟已过万重山”的感觉。
+
+但学习不会因为一次考试而结束。这段经历让我更理解“小考小玩，大考大玩，不考不玩”这句话：把功夫下在平时，临近考试时也要给自己适当的休息。只有平时认真学习，面对考试时才能多一分从容。
+
+## English
+
+I have finished my three years in the IB program. The pressure before the exams and the uncertainty during them made those two weeks difficult. Now I feel the relief captured by the Chinese phrase “the light boat has already passed countless mountains.”
+
+Learning does not end with an exam. One lesson I took from this experience is to prepare consistently and make room for rest when exams arrive. Studying steadily throughout the term makes it easier to approach an exam with a calmer mind.

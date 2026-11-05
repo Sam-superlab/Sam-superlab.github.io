@@ -1,0 +1,8 @@
+<div class="contact-links" aria-label="Contact and social links">
+  {% if site.owner.email %}<a href="mailto:{{ site.owner.email }}">Email {% include icon.html name='external' %}</a>{% endif %}
+  {% if site.owner.cv %}<a href="{{ site.owner.cv | relative_url }}">Résumé <small>PDF</small>{% include icon.html name='external' %}</a>{% endif %}
+  {% if site.owner.linkedin %}<a href="https://linkedin.com/in/{{ site.owner.linkedin }}">LinkedIn {% include icon.html name='external' %}</a>{% endif %}
+  {% if site.owner.github %}<a href="https://github.com/{{ site.owner.github }}">GitHub {% include icon.html name='external' %}</a>{% endif %}
+  {% if site.owner.instagram %}<a href="https://instagram.com/{{ site.owner.instagram }}">Instagram {% include icon.html name='external' %}</a>{% endif %}
+  {% if site.owner.zhihu %}<a href="{{ site.owner.zhihu }}">Zhihu {% include icon.html name='external' %}</a>{% endif %}
+</div>

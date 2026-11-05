@@ -1,97 +1,68 @@
 ---
 layout: page
 permalink: /blogs/Proof-techniques-in-abstract-algebra/index.html
-title: Proof techniques in abstract algebra
+title: Proof Techniques in Abstract Algebra
+description: Proving uniqueness, verifying isomorphisms, and recognizing structural properties in algebra.
 ---
 {% include mathjax.html %}
 
-## Proof techniques in abstract algebra
+# Proof Techniques in Abstract Algebra
 
-### Basic techniques
+Algebraic proofs often ask whether an object is unique, whether a map preserves an operation, or whether two structures are isomorphic. The key is to work directly from the definitions.
 
->We wish to prove an element is unique
+## Proving Uniqueness
 
-```{Proof}
-We have standard method that assuming there are two elements and we show that they are the same using some assumptions or premises.
-```
+To prove uniqueness, suppose two objects satisfy the defining property and show that they are equal. If the statement also asserts existence, establish that separately.
 
-### How to Show Two Binary Structures Are Isomorphic
+Example: A binary operation has at most one two-sided identity element.
 
-Let $(S, *)$ and $(S', *')$ be binary algebraic structures.  
-To prove that $(S, *) \cong (S', *')$, proceed as follows.
+Proof: Suppose $$e$$ and $$f$$ are both two-sided identities. Since $$e$$ is an identity, $$e*f=f$$. Since $$f$$ is an identity, $$e*f=e$$. Therefore $$e=f$$.
 
-1. **Define the map.**  
-   Define a function
-   \\[
-   \phi : S \to S'
-   \\]
-   by explicitly specifying $\phi(s)$ for every $s \in S$.
+## Showing Two Binary Structures Are Isomorphic
 
-2. **Injectivity (one-to-one).**  
-   Show that $\phi$ is injective.  
-   That is, assume
-   \\[
-   \phi(x) = \phi(y)
-   \\]
-   for $x,y \in S$, and deduce that $x = y$.
+Let $$(S,*)$$ and $$(S',*')$$ be sets equipped with binary operations. To prove they are isomorphic, construct a bijection that preserves the operation.
 
-3. **Surjectivity (onto).**  
-   Show that $\phi$ is surjective.  
-   That is, let $s' \in S'$ be arbitrary and prove that there exists $s \in S$ such that
-   \\[
-   \phi(s) = s'.
-   \\]
+1. Define a map $$\phi:S\to S'$$ explicitly. Check that it is well-defined and takes values in $$S'$$.
+2. Prove injectivity: if $$\phi(x)=\phi(y)$$, then $$x=y$$.
+3. Prove surjectivity: for every $$s'\in S'$$, find an $$s\in S$$ with $$\phi(s)=s'$$.
+4. Verify the homomorphism property:
 
-4. **Homomorphism property.**  
-   Show that $\phi$ preserves the operation:
-   \\[
-   \phi(x * y) = \phi(x) *' \phi(y)
-   \quad \text{for all } x,y \in S.
-   \\]
-   This is typically verified by direct computation.
+$$
+\phi(x*y)=\phi(x)*'\phi(y)
+\qquad\text{for all }x,y\in S.
+$$
 
-If all four steps are satisfied, then $\phi$ is an isomorphism and the structures $(S, *)$ and $(S', *')$ are isomorphic.
+For structures with additional operations, such as rings, check preservation of all required operations and any distinguished elements required by the definition you are using.
 
-### Structural Properties and Isomorphism
+### Example: Integers and Even Integers Under Addition
 
-A *structural property* of a binary structure $(S, *)$ is a property that is *preserved under isomorphism*. That is, if
-\\[
-(S, *) \cong (S', *'),
-\\]
-then $(S, *)$ and $(S', *')$ must share all structural properties.
+Define $$\phi:\mathbb{Z}\to2\mathbb{Z}$$ by $$\phi(n)=2n$$. If $$2m=2n$$, then $$m=n$$, so the map is injective. Every even integer has the form $$2n$$, so it is surjective. Finally,
 
-Structural properties are not concerned with:
-- the names of the elements of the set,
-- the symbols used to denote the operation,
-- whether one set is a subset of another.
+$$
+\phi(m+n)=2(m+n)=2m+2n=\phi(m)+\phi(n).
+$$
 
-Instead, structural properties depend only on the algebraic structure itself.
+Thus $$(\mathbb{Z},+)$$ and $$(2\mathbb{Z},+)$$ are isomorphic, even though $$2\mathbb{Z}$$ is a proper subset of $$\mathbb{Z}$$.
 
-**Examples of structural properties:**
-- Cardinality (finite, countably infinite, uncountable)
-- Existence of an identity element
-- Existence of inverses
-- Associativity and commutativity
-- Number of elements in the underlying set
+## Structural Properties
 
-**Non-structural properties:**
-- Element labels or notation
-- The name of the operation (e.g., $+$ vs. $\times$)
-- Whether one structure is a proper subset of another
+A structural property is preserved under isomorphism. For binary structures, examples include:
 
-**Key consequence:**  
-If two structures have different cardinalities, they cannot be isomorphic.
+- Cardinality.
+- Associativity and commutativity.
+- Existence of a two-sided identity.
+- In a group, the order of each element and the existence of inverses.
 
-For example,
-\\[
-(\mathbb{Q}, +) \not\cong (\mathbb{R}, +),
-\\]
-since $\mathbb{Q}$ is countable while $\mathbb{R}$ is uncountable.
+Element labels, operation symbols, and the way a set sits inside an ambient set are not, by themselves, structural properties.
 
-**Important caution:**  
-A structure may be isomorphic to a proper subset of itself.  
-Therefore, being a proper subset does *not* rule out isomorphism.
+### Using an Invariant to Rule Out an Isomorphism
 
-**Summary:**  
-Isomorphism preserves structure, not appearance.
+If two structures have different cardinalities, no bijection exists between them, so they cannot be isomorphic. For example,
 
+$$
+(\mathbb{Q},+)\not\cong(\mathbb{R},+),
+$$
+
+because $$\mathbb{Q}$$ is countable and $$\mathbb{R}$$ is uncountable.
+
+Matching one invariant does not prove isomorphism. For instance, two groups may have the same cardinality but differ in commutativity or element orders. To establish an isomorphism, supply a map and verify all the required properties.

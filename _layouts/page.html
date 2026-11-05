@@ -1,63 +1,79 @@
-<!-- Lastly modified by Hanlin CAI in 2023/04/26 -->
-<!-- It is not recommended to modify this code, unless you are a Pro-->
-
 <!doctype html>
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
-<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
-
-<head>
-{% include head.html %}
-
-<script src="https://cdn.counter.dev/script.js" data-id="4c8f7caa-2b55-46cd-a995-2c4633303773" data-utcoffset="8"></script>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T5N5JY1E21"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-T5N5JY1E21');
-</script>
-
-</head>
-
-
-<body class="page" itemscope itemtype="http://schema.org/WebPage">
-
-{% include chrome-frame.html %}
-
-{% include navigation.html %}
-
-{% if page.image.feature %}<div class="image-wrap">
-  <img src="{{ site.url }}/images/{{ page.image.feature }}" alt="{{ page.title }} feature image" itemprop="primaryImageOfPage">
-</div><!-- /.image-wrap -->{% endif %}
-
-<div id="main" role="main"  itemprop="mainContentOfPage">
-  <div class="article-author-top">
-    {% include author-bio.html %}
-  </div>
-  <article itemscope itemtype="http://schema.org/CreativeWork">
-  {% comment %}
-    <div class="headline-wrap">
-      <h1 itemprop="headline">{{ page.title }}</h1>
-    </div><!--/ .headline-wrap -->
-  {% endcomment %}
-    <div class="article-wrap" itemprop="text">
-      {{ content }}
-    </div><!-- /.article-wrap -->
-  </article>
-</div><!-- /#index -->
-
-<div class="footer-wrap">
-  <footer>
-    {% include footer.html %}
-  </footer>
-</div><!-- /.footer-wrap -->
-
-{% include scripts.html %}
-
+<html lang="en">
+<head>{% include head.html %}{% include analytics.html %}</head>
+{% assign route = page.url | remove: 'index.html' %}
+{% assign page_kind = 'article' %}
+{% case route %}
+{% when '/' %}{% assign page_kind = 'home' %}
+{% when '/teams/' %}{% assign page_kind = 'projects' %}
+{% when '/research/' %}{% assign page_kind = 'research' %}
+{% when '/awards/' %}{% assign page_kind = 'awards' %}
+{% when '/hobbies/' %}{% assign page_kind = 'hobbies' %}
+{% when '/blogs/' %}{% assign page_kind = 'blog' %}
+{% endcase %}
+<body id="top" class="page-{{ page_kind }}">
+  {% include navigation.html %}
+  <div class="reading-progress" aria-hidden="true"></div>
+  <main id="main" tabindex="-1">
+    {% assign heading_id = page.title | slugify %}
+    {% assign body_content = content %}
+    {% if content contains '<h1' and content contains '</h1>' %}
+      {% assign heading_prefix = content | split:'<h1' | first %}
+      {% assign heading_html = content | remove_first:heading_prefix | split:'</h1>' | first | append:'</h1>' %}
+      {% assign heading_tag = heading_html | split:'>' | first %}
+      {% if heading_tag contains 'id="' %}
+        {% assign heading_id = heading_tag | split:'id="' | last | split:'"' | first %}
+      {% endif %}
+      {% assign body_content = content | remove_first:heading_html %}
+    {% endif %}
+    <div class="page-container">
+      <header class="page-masthead{% if page_kind == 'home' %} home-masthead{% endif %}">
+        <div class="masthead-copy">
+          {% case page_kind %}
+          {% when 'home' %}
+            <p class="section-label mono"><span>{{ page.title }} / Grinnell College</span></p>
+            <h1 id="{{ heading_id }}">Xuyi (Sam) Ren</h1>
+            <div class="masthead-actions">
+              <a class="masthead-action masthead-action-primary" href="{{ '/research/' | relative_url }}">Research {% include icon.html name='arrow' %}</a>
+              {% if site.owner.cv %}<a class="masthead-action" href="{{ site.owner.cv | relative_url }}">Résumé {% include icon.html name='file' %}</a>{% endif %}
+            </div>
+          {% when 'blog' %}
+            <p class="section-label mono"><span>06 / {{ page.title }}</span><span class="label-line"></span></p>
+            <h1 id="{{ heading_id }}">The open<br><em>notebook.</em></h1>
+            <p class="masthead-note">Thoughts, collected along the way</p>
+          {% else %}
+            <h1 id="{{ heading_id }}">{{ page.title }}</h1>
+          {% endcase %}
+          {% if page.last_updated %}<p class="page-updated mono">Updated <time datetime="{{ page.last_updated | date:'%Y-%m-%d' }}">{{ page.last_updated | date:'%b %-d, %Y' }}</time></p>{% endif %}
+        </div>
+        {% if page_kind == 'home' %}{% include author-bio.html %}{% elsif page_kind == 'blog' %}{% include atlas-art.html %}{% endif %}
+      </header>
+      {% if page_kind == 'article' and page.url contains '/blogs/' %}<a class="article-back mono" href="{{ '/blogs/' | relative_url }}">← Back to the notebook</a>{% endif %}
+      <div class="reading-layout">
+        <aside class="page-index" aria-label="On this page"><p class="mono">On this page <span>↓</span></p><nav class="section-index" aria-label="Page sections"></nav><span class="index-ornament" aria-hidden="true">✳</span></aside>
+        <article class="article-wrap" aria-label="{{ page.title | escape }}">
+          {% assign sections = body_content | split:'<h2 ' %}
+          <div class="page-introduction">{{ sections[0] }}</div>
+          {% for section in sections offset:1 %}
+          <section class="content-section" aria-labelledby="{% assign section_id = section | split:'>' | first | split:'id="' | last | split:'"' | first %}{{ section_id }}"><span class="section-count mono" aria-hidden="true">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span><div class="section-body"><h2 {{ section }}</div></section>
+          {% endfor %}
+        </article>
+      </div>
+      {% if page_kind == 'home' %}
+      <nav class="explore-grid" aria-label="Explore the website">
+        <a href="{{ '/research/' | relative_url }}" class="explore-card explore-research">
+          <h2>Research</h2>
+          <span class="card-link">Questions, preprints &amp; ideas {% include icon.html name='arrow' %}</span>
+        </a>
+        <a href="{{ '/blogs/' | relative_url }}" class="explore-card explore-notebook">
+          <h2>Blog</h2>
+          <span class="card-link">Learning, mathematics &amp; life {% include icon.html name='arrow' %}</span>
+        </a>
+      </nav>
+      {% endif %}
+    </div>
+  </main>
+  {% include footer.html %}
+  {% include scripts.html %}
 </body>
 </html>

@@ -1,70 +1,34 @@
-<!-- It is not recommended to modify this code, unless you are a Pro-->
-<!-- Lastly modified by Hanlin CAI in 2023/04/26 -->
-
 <meta charset="utf-8">
-<title>{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}</title>
-{% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
-{% if page.tags %}<meta name="keywords" content="{{ page.tags | join: ', ' }}">{% endif %}
-{% if site.owner.twitter %}<!-- Twitter Card and Open Graph meta -->
-<meta name="twitter:title" content="{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}">
-<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ page.content | strip_html | strip_newlines | truncate: 120 }}{% endif %}">
-<meta name="twitter:creator" content="@{{ site.owner.twitter }}">
-{% if page.layout == 'photo' %}
-<meta name="twitter:card" content="photo">
-{% if page.image %}<meta name="twitter:image:src" content="{{ site.url }}/images/{{ page.image.feature }}">{% endif %}
-{% else %}
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image:src" content="{% if page.image.thumb %}{{ site.url }}/images/{{ page.image.thumb }}{% else %}{{ site.url }}/images/default-thumb.png{% endif %}">{% endif %}
-<meta property="og:type" content="article">
-<meta property="og:image" content="{% if page.image.thumb %}{{ site.url }}/images/{{ page.image.thumb }}{% else %}{{ site.url }}/images/default-thumb.png{% endif %}">
-{% endif %}
-<meta property="og:locale" content="en_US">
-<meta property="og:title" content="{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}">
-<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ page.content | strip_html | strip_newlines | truncate: 120 }}{% endif %}">
-<meta property="og:url" content="{{ site.url }}{{ page.url }}">
-<meta property="og:site_name" content="{{ site.title }}">
-
-{% if site.google_verify %}<!-- Webmaster Tools verfication -->
-<meta name="google-site-verification" content="{{ site.google_verify }}">{% endif %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title | escape }} — {% endif %}{{ site.title | escape }}</title>
+<meta name="description" content="{{ page.description | default: site.description | escape }}">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#edf1f7" id="theme-color">
+{% if site.google_verify %}<meta name="google-site-verification" content="{{ site.google_verify }}">{% endif %}
 {% if site.bing_verify %}<meta name="msvalidate.01" content="{{ site.bing_verify }}">{% endif %}
-
-{% capture canonical %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' | strip_slash }}{% endif %}{% endcapture %}
+{% capture canonical %}{{ site.url }}{{ page.url | remove: 'index.html' }}{% endcapture %}
 <link rel="canonical" href="{{ canonical }}">
-{% if site.owner.google_plus %}<link rel="author" href="{{ site.owner.google_plus }}?rel=author">{% endif %}
-
-
-<!-- http://t.co/dKP3o1e -->
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-<!-- Google Webfonts -->
-<link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|PT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous" />
-
-<!-- For all browsers -->
-<link rel="stylesheet" href="/assets/css/main.css">
-
-<!--[if (lt IE 9) & (!IEMobile)]>
-<link rel="stylesheet" href="/assets/css/ie.css">
-<![endif]-->
-
-<meta http-equiv="cleartype" content="on">
-
-<!-- Load Modernizr -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha512-3n19xznO0ubPpSwYCRRBgHh63DrV+bdZfHK52b1esvId4GsfwStQNPJFjeQos2h3JwCmZl0/LgLxSKMAI55hgw==" crossorigin="anonymous"></script>
-
-<!-- 16x16 -->
-<link rel="shortcut icon" href="{{ site.url }}/images/fav.ico">
-<!-- 32x32 -->
-<link rel="shortcut icon" href="{{ site.url }}/images/fav.png">
-<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
-<link rel="apple-touch-icon-precomposed" href="{{ site.url }}/images/apple-touch-icon-precomposed.png">
-<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ site.url }}/images/fav.png">
-<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ site.url }}/images/fav.png">
-<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.url }}/images/fav.png">
+<meta property="og:title" content="{{ page.title | default: site.title | escape }} — {{ site.title | escape }}">
+<meta property="og:description" content="{{ page.description | default: site.description | escape }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:site_name" content="{{ site.title | escape }}">
+<meta property="og:type" content="website">
+<meta property="og:image" content="{{ '/images/Xuyi.png' | absolute_url }}">
+<link rel="icon" href="{{ '/images/fav.ico' | relative_url }}">
+<link rel="apple-touch-icon" href="{{ '/images/fav.png' | relative_url }}">
+<script>
+  (function () {
+    document.documentElement.classList.add('js');
+    var preference;
+    try { preference = localStorage.getItem('sam-ren-theme'); } catch (error) {}
+    var theme = preference === 'light' || preference === 'dark' ? preference :
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.dataset.theme = theme;
+    document.getElementById('theme-color').content = theme === 'dark' ? '#111722' : '#edf1f7';
+  }());
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&amp;family=Manrope:wght@400;500;600;650;700;750;800&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/css/atlas.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/page-transitions.css' | relative_url }}">

@@ -1,18 +1,24 @@
 ---
 layout: page
 permalink: /blogs/Blog-Lifejourney/index.html
-title: Journey of life
+title: A Personal Journey
+description: A reflection on bullying, recovery, and founding a school peer-support project.
 ---
 
-# Story of myself
-"I feel as though the memories of my life imprison me."The boy across from me said, "I don't know what to do...". Helping students with thoughts like these is the reason I founded this Peer Support project in our school. To improve the mental health of the entire community. It has already aided many students who are struggling with personal challenges. To help you better appreciate the success of this project, I want to share its sad origin story, which began when I was in middle school.
+# A Personal Journey
 
-When I was 13, I faced a distressing period. I was bullied because of my obesity and feelings of inferiority. I will never forget that day in the restroom when my classmates crowded outside the stall, banging loudly on the door, ridiculing me, and throwing garbage into the stall until the school bell rang. After I returned to class, they blamed me for the mess. Consequently, I was suspended from school. I felt very depressed because my teachers were only focused on academic performance and didn't take my suffering seriously. My parents then had to transfer me to an international middle school, where I initially spent two peaceful years building many like-minded friendships and pursuing the things I loved. Yet I still carried the humiliation from the past.
+“I feel as though the memories of my life imprison me,” the boy across from me said. “I don't know what to do…”
 
-The scars and wounds from the past still hung over me like a heavy burden, ready to smash my spirit at any moment. Misfortune struck when I was diagnosed with anxiety and depression, forcing me to take a one-month rest from my studies. I spent my days in the hospital, aimlessly watching the leaves fall from the tree outside the window. Memories of joyless days played on a loop in my mind, trapping me in a swamp of recollection. After the psychological consultation, I lay in bed exhausted. Suddenly, I received a text from a teammate with whom I had once collaborated on a Learning-support project.
+Conversations like this were the reason I founded a Peer Support project at my school. I wanted students facing personal difficulties to feel heard and supported. The project grew out of my own experiences in middle school.
 
-Memories of our experience volunteering and teaching in the remote Liangshan region resurfaced. In my memory, I was gazing at dusty teaching materials from my time as a volunteer teacher. Those days were undeniably the happiest times of my life despite the challenging conditions. I woke early to prepare breakfast, teach mathematics, and conduct home visits for the children there. Recalling these experiences filled my heart with a sense of deliverance and reminded me of a quote:" When love is our guiding light, we can break through barriers to be of loving service to the world..." With this idea, I was suddenly filled with courage, conviction, and determination to create the Peer Support project- a project aimed at helping others emerge from their darkness, just as I had.
+When I was 13, I was bullied about my weight. I remember classmates gathering outside a restroom stall, banging on the door, ridiculing me, and throwing garbage inside until the bell rang. When I returned to class, they blamed me for the mess, and I was suspended. I felt that my teachers focused on academic performance without taking my distress seriously.
 
-We created anonymous mailboxes to receive and respond to the silent cries of students struggling with depression. At the same time, we invited school counselors and psychology teachers to our program's weekly professional training. During the days of isolation due to COVID-19, we provided students isolated on different floors of our dormitory with snacks free of charge and organized activities like karaoke competitions and online eSports to raise morale. Through this journey, I discovered I possessed leadership skills and the ability to grasp complex situations. Perhaps more importantly, I regained my lost confidence.
+My parents transferred me to an international middle school. Over the next two years, I made friends who shared my interests and found more space to pursue the things I loved. Even so, the earlier experiences stayed with me. I was later diagnosed with anxiety and depression and took a month away from my studies. During that time, I received a message from a teammate from a learning-support project.
 
-I presented this project to the whole school, and despite the audience's gaze being fixed on me, I stood before them without fear because I had already confronted my past and emerged stronger. To the crowd, I declared, "This is not just a simple Peer Support activity team. We are also a movement focused on redemption. We use the misfortunes in our lives to provide others with a glimmer of hope. Life has taught me that what defines us is not the tragedies and obstacles we encounter but rather how we face and overcome them." The audience erupted in applause.
+That message brought back memories of volunteering in the Liangshan region. I remembered preparing breakfast, teaching mathematics, and visiting children's homes. Despite the difficult conditions, those experiences had brought me joy and a sense of purpose. Remembering them encouraged me to create a project that could help other students through difficult periods.
+
+For the Peer Support project, we set up anonymous mailboxes where students could share their concerns and receive responses. School counselors and psychology teachers provided weekly training. During COVID-19 isolation, we distributed free snacks to students on different dormitory floors and organized activities, including karaoke competitions and online esports, to help raise morale.
+
+Through this work, I began to recognize my ability to lead and respond to complicated situations. I also regained some of the confidence I had lost.
+
+When I presented the project to the school, I was able to speak about experiences I had once found difficult to face. I wanted to show how support from others, and the opportunity to support them in return, had helped me move forward.

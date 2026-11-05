@@ -1,22 +1,11 @@
 <script type="text/x-mathjax-config">
-    var font = "Neo-Euler";
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [['$','$']],
-            displayMath: [['\\[','\\]']],
-            processEscapes: true,
-        },
-        "SVG":{ 
-            font:font
-        },
-        "HTML-CSS": {
-            webFont: font,
-            imageFont: font,
-            preferredFont: font,
-            availableFonts: [],
-            scale: 85,
-            mtextFontInherit: true
-        }
-    }); </script>
-<script type="text/javascript"
-    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']],
+      processEscapes: true
+    },
+    "HTML-CSS": { scale: 85, mtextFontInherit: true }
+  });
+</script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>

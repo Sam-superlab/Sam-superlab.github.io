@@ -1,20 +1,21 @@
 ---
 layout: page
 permalink: /blogs/Study-schedule/index.html
-title: Study schedule for summer
+title: A Summer Study Plan
+description: A study plan for real analysis, linear algebra, and point-set topology.
 ---
 
+# A Summer Study Plan
 
-## Study plan for summer
-#### Real Analysis study plan
+## Real Analysis
 
-1. Have a brief study by watching videos for real analysis.
-2. Study by reading books(Analysis by Terence Tao) in detail.
-3. Finish all the odd number practice in the book of Terence Tao
-4. Finish all the even number question in the bool of Terence Tao(IF there still some free time)
+1. Watch introductory lectures to get an overview of the subject.
+2. Read Terence Tao's *Analysis* carefully, working through the definitions and proofs.
+3. Complete the odd-numbered exercises.
+4. Attempt the even-numbered exercises if time permits.
 
-#### Set point topology & Algebra
-1. Watch videos to have a brief understanding of the topics.
-2. Study by reading books(Linear algebra done right & Topology by Murkunes)
-3. Do some practice questions(If there still some free time)
+## Linear Algebra and Point-Set Topology
 
+1. Watch introductory lectures to become familiar with the main ideas.
+2. Study *Linear Algebra Done Right* and Munkres's *Topology*.
+3. Work through exercises to test my understanding.

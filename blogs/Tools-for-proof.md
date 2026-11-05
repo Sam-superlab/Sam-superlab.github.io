@@ -2,46 +2,76 @@
 layout: page
 permalink: /blogs/Tools-for-proof/index.html
 title: Tools for Proof
+description: Worked examples of induction, contradiction, contraposition, proof by cases, and construction.
 ---
 {% include mathjax.html %}
 
-## Tools for Proof
+# Tools for Proof
 
-### 1. Mathematical Induction and strong induction
-Mathematical induction is a proof technique that allows us to prove that a statement is true for all natural numbers. It is a powerful tool for proving statements about integers and other discrete structures.
+A proof technique is a way to organize an argument. Start by identifying the assumptions and the precise statement you need to establish, then choose a method that fits.
 
-Strong induction is a variant of mathematical induction that allows us to prove that a statement is true for all natural numbers by assuming that the statement is true for all smaller natural numbers.
+## 1. Mathematical Induction
 
->Example: Prove that $1+2+3+\cdots+n=\frac{n(n+1)}{2}$ for all natural numbers $n$.
+To prove a statement for all positive integers, establish a base case and show that the statement for an arbitrary integer $$k$$ implies the statement for $$k+1$$.
 
-Proof: By mathematical induction, we can prove that the statement is true for all natural numbers $n$.
+Example: For every positive integer $$n$$,
 
-### 2. Proof by Contradiction
+$$
+1+2+\cdots+n=\frac{n(n+1)}{2}.
+$$
 
-This technique is usefull when we have a existential statement to prove. We assume the negation of the statement is true and then show that this leads to a contradiction.
+Proof: For $$n=1$$, both sides equal $$1$$. Assume the formula holds for $$n=k$$. Then
 
->Example: Prove that there is no rational number whose square is 2.
+$$
+1+2+\cdots+k+(k+1)
+=\frac{k(k+1)}{2}+(k+1)
+=\frac{(k+1)(k+2)}{2}.
+$$
 
-Proof: Assume there is a rational number $x$ whose square is 2. Then we can write $x=\frac{a}{b}$ where $a$ and $b$ are coprime integers. Then we have $x^2=\frac{a^2}{b^2}=2$. This implies that $a^2=2b^2$. Since $a^2$ is even, $a$ must be even. Let $a=2k$ for some integer $k$. Then we have $4k^2=2b^2$. This implies that $b^2=2k^2$. Since $b^2$ is even, $b$ must be even. This contradicts the fact that $a$ and $b$ are coprime. Therefore, there is no rational number whose square is 2.
+This is the formula for $$k+1$$, so induction proves the claim.
 
-### 3. Proof by Contraposition
+### Strong Induction
 
-This technique is usefull when we have a "if-then" statement to prove. We assume the conclusion is false and then show that this leads to a contradiction.
+Strong induction allows the inductive step to use all earlier cases, rather than just the immediately preceding case.
 
->Example: Prove that if $n$ is a natural number and $n^2$ is even, then $n$ is even.
+Example: Every integer $$n\ge2$$ is a product of primes.
 
-Proof: Assume that $n$ is not even. Then $n$ is odd. Let $n=2k+1$ for some integer $k$. Then we have $n^2=(2k+1)^2=4k^2+4k+1=2(2k^2+2k)+1$. This implies that $n^2$ is odd. This contradicts the fact that $n^2$ is even. Therefore, if $n$ is a natural number and $n^2$ is even, then $n$ is even.
+Proof: The base case $$n=2$$ is prime. Suppose the claim holds for every integer from $$2$$ through $$n-1$$. If $$n$$ is prime, it is already a product with one prime factor. Otherwise, $$n=ab$$ for integers $$2\le a,b<n$$. The inductive hypothesis expresses both $$a$$ and $$b$$ as products of primes, and multiplying those products gives the required expression for $$n$$.
 
-### 4. Proof by cases
+## 2. Proof by Contradiction
 
-This technique is usefull when we are able to construct a partition for the problem. We then prove that the statement is true for each case.
+Assume the negation of the desired conclusion and derive a contradiction with a known fact or an assumption.
 
->Example: Prove that every natural number is either even or odd.
+Example: No rational number has square $$2$$.
 
-Proof: We can partition the natural numbers into two sets: the even numbers and the odd numbers. We then prove that the statement is true for each case.
+Proof: Suppose $$x^2=2$$ for a rational number $$x=a/b$$, where $$a,b$$ are coprime integers and $$b\ne0$$. Then $$a^2=2b^2$$, so $$a$$ is even. Write $$a=2k$$. Substitution gives $$b^2=2k^2$$, so $$b$$ is also even. This contradicts the assumption that $$a$$ and $$b$$ are coprime.
 
-### 5. Proof by construction
+## 3. Proof by Contraposition
 
-This technique is usefull when we are able to construct a concrete example that satisfies the statement.
+To prove “if $$P$$, then $$Q$$,” prove the equivalent statement “if not $$Q$$, then not $$P$$.”
 
->Example: Prove that there is a prime number between $n$ and $2n$ for any natural number $n$.
+Example: If $$n$$ is an integer and $$n^2$$ is even, then $$n$$ is even.
+
+Proof: We prove the contrapositive. If $$n$$ is odd, write $$n=2k+1$$ for an integer $$k$$. Then
+
+$$
+n^2=(2k+1)^2=2(2k^2+2k)+1,
+$$
+
+which is odd. Thus an odd integer cannot have an even square, proving the original implication.
+
+## 4. Proof by Cases
+
+Divide the possibilities into cases that cover every situation, then prove the claim in each case.
+
+Example: For every integer $$n$$, the number $$n(n+1)$$ is even.
+
+Proof: By division with remainder, $$n$$ is either even or odd. If $$n=2k$$, then $$n(n+1)=2k(2k+1)$$ is even. If $$n=2k+1$$, then $$n(n+1)=(2k+1)2(k+1)$$ is even. Both cases give the same conclusion.
+
+## 5. Proof by Construction
+
+To prove that an object exists, give an explicit example and verify the required properties.
+
+Example: For every positive integer $$n$$, there is an even integer greater than $$n$$.
+
+Proof: Choose $$m=2n$$. The integer $$m$$ is even, and $$m-n=n>0$$. Therefore $$m>n$$.

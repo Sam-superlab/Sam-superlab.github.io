@@ -1,16 +1,18 @@
 ---
 layout: page
 permalink: /blogs/Blog-Math1st/index.html
-title: Why Math
+title: Why Mathematics?
+description: How my interest in mathematics developed, from early encounters with calculus to sharing its beauty with others.
 ---
-# Why Math story
 
-During my early years experience, I had totally different concepts and perspectives in Math. These shifting ideas represent the changes that occur in my personal experience and my philosophy of education. Initially, my father introduced me to calculus through a comic to ignite my interest in Math. However, as a primary student. I found it rather tedious compared to the captivating world of physics. This early phase, where mathematics did not resonate with me. 
+# Why Mathematics?
 
-In middle school, my perspective on math shifted. The challenge and the ability to achieve high grades became motivating factors. This stage is crucial as it often marks the transition from viewing math as a tedious subject to seeing it as a series of challenges to be conquered. It's interesting to note that, for me, the allure was not initially in the beauty or utility of math but in the challenge it presented.
+My relationship with mathematics has changed as I have grown. When I was in primary school, my father introduced me to calculus through a comic book. He hoped it would spark my interest, but at the time I found physics more engaging.
 
-In High school, I started to do Math research. I began to notice the inherent beauty of mathematics from my diverse research topics like distinct prime divisors of odd perfect numbers, noticing the symmetry and elegance in concepts like isomorphism and bijection. Math is worthy not just for its challenge or utility, but for its aesthetic qualities – much like one appreciates art.
+In middle school, mathematics became a challenge I wanted to master. Solving difficult problems and earning high grades motivated me. My interest began with the satisfaction of meeting a challenge.
 
-Just like Grand Sanderson, I aimed to invite more and more students to enjoy the beauty of math. Hence I began to do some seminars that introduce different content in math during my free time in school. 
+In high school, I started exploring mathematical research topics, including distinct prime divisors of odd perfect numbers. Ideas such as isomorphisms and bijections helped me appreciate the patterns and symmetry within mathematics. I began to value the subject for its beauty as well as its difficulty and usefulness.
 
- Mathematics as an art form, where joy and satisfaction come from exploration and understanding rather than practical application, is a perspective shared by many mathematicians and enthusiasts. This perspective is aligned with what some mathematicians like G.H. Hardy have expressed, valuing the beauty and purity of mathematics for its own sake.
+Inspired by Grant Sanderson, I wanted to help other students enjoy that beauty. I began giving seminars at school to introduce different mathematical topics.
+
+What draws me to mathematics now is the pleasure of exploration: following a question, finding a connection, and gradually understanding why something is true. Sharing that experience is part of why I keep studying.

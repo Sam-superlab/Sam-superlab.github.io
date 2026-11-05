@@ -1,21 +1,20 @@
 title: Sam Ren
-tagline: Welcome to the personal website of Sam Ren, powered by Jekyll using the Minimal Mistakes theme.
-# description: Two roads diverged in woods, I took the one less traveled by.
+tagline: Mathematics, research, and educational access.
+description: Xuyi (Sam) Ren's personal website, featuring mathematical research, study notes, and educational projects.
 #Comment out url when working locally to resolve base urls correctly
-url: https://sam-superlab.github.io/
+url: https://sam-superlab.github.io
 
 # Owner/author information
 owner:
   name: Sam Ren
   avatar: Xuyi.png
-  bio: 路漫漫其修远兮，吾将上下而求索(The path to truth is long, yet I shall persevere, sparing no effort in my quest.)
+  bio: 路漫漫其修远兮，吾将上下而求索。 (The path to truth is long, yet I shall persevere in my search.)
   email: renxuyi@grinnell.edu
   github: Sam-superlab
-  linkedin: https://www.linkedin.com/in/xuyi-ren-39161228b/
+  linkedin: xuyi-ren-39161228b
   cv: /Sam's Resume.pdf
   # scholar: https://scholar.google.com/citations?user=8igSoWgAAAAJ
   # bilibili:
-  # researchgate: https://www.researchgate.net/profile/Hanlin-Cai
   zhihu: https://www.zhihu.com/people/sam-58-31-28
   instagram: sam_ren0621
   # lastfm:
@@ -43,7 +42,7 @@ links:
     url: /awards/
   - title: Hobbies
     url: /hobbies/
-  - title: Blogs
+  - title: Blog
     url: /blogs/
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
@@ -58,6 +57,8 @@ markdown: kramdown
 permalink: /:categories/:title
 
 kramdown:
+  input: Kramdown
+  math_engine: mathjax
   auto_ids: true
   footnote_nr: 1
   entity_output: as_char
@@ -73,11 +74,21 @@ kramdown:
 
 # disqus settings:
 disqus:
-  shortname: lancecai
+  shortname: blog-sam
 
 include: [".htaccess"]
 exclude:
   [
+    "backup/page/backup/blogs-230427.md",
+    "backup/page/backup/my-links-230303.md",
+    "backup/page/backup/my-publications-230112.md",
+    "backup/page/backup/projects-230425.md",
+    "backup/page/backup/projects-backup.md",
+    "backup/page/backup/publications-orginal.md",
+    "backup/page/backup/visitors.md",
+    "backup/page/projects-230811.md",
+    "Gemfile",
+    "Gemfile.lock",
     "lib",
     "config.rb",
     "Capfile",
@@ -90,10 +101,3 @@ exclude:
     "minimal-mistakes.sublime-project",
     "minimal-mistakes.sublime-workspace",
   ]
-# Latest update in 2023/12/10 by Hanlin Cai.
-
-# existing social media configuration...
-social:
-  # existing social media entries...
-  linkedin: xuyi-ren-39161228b
-  # other social media entries...

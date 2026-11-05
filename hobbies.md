@@ -2,24 +2,27 @@
 layout: page
 permalink: /hobbies/index.html
 title: Hobbies
+description: Basketball, workouts, video games, and ways to connect with Sam Ren.
 ---
 
 # Hobbies
 
 ## Basketball
 
-I have played Basketball for about 12 years and I am now the captain and the coach of my school basketball team. I delve into basketball because it is fantastic when the ball just goes into the basket. This is the link to the basketball team: [Basketball team](https://sam-superlab.github.io/file/Basketball-Team/)
+I enjoy playing basketball and have served as captain and coach of my school team. Few things feel as satisfying as seeing a shot go through the basket.
 
 ## Workouts
-I am interested in doing Workouts and it helps me find peace inside me.
+
+Working out helps me find a sense of calm.
 
 ## Video Games
-I like to play video games, especially sandbox games.
+
+I especially enjoy sandbox games, including:
+
 - Terraria
 - Minecraft
 - Don't Starve Together
 
-## Chat with me
+## Let's Chat
 
-**Feb 2024:** I have set up the [online-coffee-time](https://calendly.com/samrenxuyi/30min). Welcome to chat with me!
-
+You're welcome to [book a conversation](https://calendly.com/samrenxuyi/30min) or [send me an email](mailto:renxuyi@grinnell.edu).
