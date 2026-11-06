@@ -11,7 +11,7 @@
 {% when '/hobbies/' %}{% assign page_kind = 'hobbies' %}
 {% when '/blogs/' %}{% assign page_kind = 'blog' %}
 {% endcase %}
-<body id="top" class="page-{{ page_kind }}">
+<body id="top" class="page-{{ page_kind }}{% if page.home_star_map %} has-home-star-map{% endif %}">
   {% include navigation.html %}
   <div class="reading-progress" aria-hidden="true"></div>
   <main id="main" tabindex="-1">
@@ -26,7 +26,9 @@
       {% endif %}
       {% assign body_content = content | remove_first:heading_html %}
     {% endif %}
+    {% if page.home_star_map %}{% include home-star-map.html heading_id=heading_id %}{% endif %}
     <div class="page-container">
+      {% unless page.home_star_map %}
       <header class="page-masthead{% if page_kind == 'home' %} home-masthead{% endif %}">
         <div class="masthead-copy">
           {% case page_kind %}
@@ -48,6 +50,7 @@
         </div>
         {% if page_kind == 'home' %}{% include author-bio.html %}{% elsif page_kind == 'blog' %}{% include atlas-art.html %}{% endif %}
       </header>
+      {% endunless %}
       {% if page_kind == 'article' and page.url contains '/blogs/' %}<a class="article-back mono" href="{{ '/blogs/' | relative_url }}">← Back to the notebook</a>{% endif %}
       <div class="reading-layout">
         {% if route contains '/blogs/' %}
@@ -62,7 +65,7 @@
         {% endif %}
         <article class="article-wrap" aria-label="{{ page.title | escape }}">
           {% assign sections = body_content | split:'<h2 ' %}
-          <div class="page-introduction">{{ sections[0] }}</div>
+          <div class="page-introduction"{% if page.home_star_map %} id="about" tabindex="-1"{% endif %}>{{ sections[0] }}</div>
           {% assign subscription_action = site.blog_subscription.action | default: '' %}
           {% if site.blog_subscription_preview or subscription_action != '' %}
             {% if page_kind == 'blog' %}{% include blog-subscribe.html %}{% endif %}
@@ -79,7 +82,7 @@
           {% endif %}
         </article>
       </div>
-      {% if page_kind == 'home' %}
+      {% if page_kind == 'home' and page.home_star_map != true %}
       <nav class="explore-grid" aria-label="Explore the website">
         <a href="{{ '/research/' | relative_url }}" class="explore-card explore-research">
           <h2>Research</h2>

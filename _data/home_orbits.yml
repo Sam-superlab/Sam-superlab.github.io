@@ -1,0 +1,18 @@
+"/":
+  summary: A short introduction, study notes, and ways to get in touch.
+  accent: "#a4c9ff"
+"/teams/":
+  summary: Sam’s Superlab, a project for sharing student notes and study resources.
+  accent: "#ecb9fd"
+"/research/":
+  summary: Mathematical projects, preprints, and talks, including my Mentored Advanced Project at Grinnell.
+  accent: "#a3f4e2"
+"/awards/":
+  summary: Selected academic honors and competition awards.
+  accent: "#ffcc93"
+"/hobbies/":
+  summary: A few things I enjoy outside mathematics, from basketball to video games.
+  accent: "#b7b8ff"
+"/blogs/":
+  summary: Essays and personal reflections on mathematics, learning, and life.
+  accent: "#ffc2d5"

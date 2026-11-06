@@ -1,0 +1,90 @@
+{% assign featured_url = '/research/' %}
+{% assign featured_orbit = site.data.home_orbits[featured_url] %}
+<section class="star-map" id="star-map" data-star-map aria-labelledby="{{ include.heading_id }}">
+  <header class="star-map-heading">
+    <div class="star-identity">
+      <p class="star-map-kicker"><span aria-hidden="true"></span> Mathematics · Grinnell College</p>
+      <h1 id="{{ include.heading_id }}">Xuyi (Sam) Ren</h1>
+      <p class="star-map-instruction">
+        <span class="star-hint-basic">Choose a planet to explore.</span>
+        <span class="star-hint-touch">Tap a planet to preview its page.</span>
+        <span class="star-hint-mouse">Hover over a planet to preview its page.</span>
+      </p>
+    </div>
+  </header>
+  <div class="star-map-body">
+    <nav class="star-stage" data-star-stage aria-label="Explore by planet">
+      <svg class="star-grid" viewBox="0 0 800 420" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="star-grid-light" x1="0" y1="1" x2="1" y2="0" gradientUnits="objectBoundingBox">
+            <stop stop-color="#88d5ff" stop-opacity=".12"/>
+            <stop offset=".48" stop-color="#88d5ff" stop-opacity=".49"/>
+            <stop offset="1" stop-color="#bca8ff" stop-opacity=".18"/>
+          </linearGradient>
+          <linearGradient id="star-surface-light" x2="0" y2="1">
+            <stop stop-color="#99beff" stop-opacity=".03"/>
+            <stop offset=".54" stop-color="#638ffa" stop-opacity=".13"/>
+            <stop offset="1" stop-color="#9876ef" stop-opacity=".06"/>
+          </linearGradient>
+        </defs>
+        <g fill="none" stroke="#92b4f9" stroke-width=".55" opacity=".24">
+          <path d="M-105 303C22 161 345 104 598 135C750 154 881 203 924 262"/>
+          <path d="M-168 318C17 211 321 111 568 120C725 125 866 173 959 237" stroke-dasharray="2 5"/>
+          <path d="M-53 375C124 424 520 393 748 264C841 210 857 167 861 136"/>
+        </g>
+        <path fill="url(#star-surface-light)" d="M15 212C102 132 250 137 417 157C572 175 721 163 792 109C784 204 728 269 613 306C446 360 143 351 15 212Z"/>
+        <g fill="none" stroke="url(#star-grid-light)" stroke-width=".85">
+          <path d="M15 212C102 132 250 137 417 157C572 175 721 163 792 109C784 204 728 269 613 306C446 360 143 351 15 212Z"/>
+          <path d="M30 225C143 161 257 176 419 190C582 204 726 183 786 142M52 244C165 203 273 209 431 221C575 232 712 212 774 173M79 263C201 234 300 240 449 250C572 259 685 243 753 208M118 284C238 265 336 268 469 277C567 284 655 271 723 240M176 305C280 296 377 294 485 299C551 302 609 295 671 275"/>
+          <path d="M58 182C74 223 99 261 153 298M113 161C130 225 158 272 226 317M176 151C194 223 224 286 308 329M246 147C260 218 295 287 385 333M323 150C339 228 375 286 468 331M401 155C415 218 454 282 548 323M477 161C490 222 536 280 616 305M554 165C566 224 602 265 677 272M632 160C644 212 680 245 727 237M705 149C715 183 743 204 759 201"/>
+        </g>
+        <path class="star-grid-orbit" d="M67 183C167 120 306 94 452 104C623 116 755 209 721 276C689 339 551 368 385 361C222 354 64 307 52 240C48 219 52 199 67 183Z"/>
+        <g class="star-grid-stars" fill="#dceaff">
+          <circle cx="37" cy="83" r="1.5"/><circle cx="83" cy="116" r=".8"/><circle cx="114" cy="42" r="1.1"/><circle cx="176" cy="73" r="1"/><circle cx="246" cy="38" r=".8"/><circle cx="295" cy="145" r="1.15"/><circle cx="353" cy="65" r="1.7"/><circle cx="398" cy="28" r=".85"/><circle cx="434" cy="127" r="1"/><circle cx="474" cy="57" r=".8"/><circle cx="508" cy="88" r="1.2"/><circle cx="568" cy="42" r="1.6"/><circle cx="612" cy="108" r=".8"/><circle cx="655" cy="76" r="1.4"/><circle cx="730" cy="57" r="1.3"/><circle cx="774" cy="95" r=".85"/><circle cx="28" cy="321" r=".9"/><circle cx="74" cy="363" r="1.2"/><circle cx="113" cy="312" r="1"/><circle cx="221" cy="359" r="1.35"/><circle cx="275" cy="385" r="1"/><circle cx="341" cy="352" r=".8"/><circle cx="451" cy="395" r="1.45"/><circle cx="514" cy="354" r="1"/><circle cx="591" cy="389" r=".8"/><circle cx="654" cy="339" r="1"/><circle cx="711" cy="370" r="1.45"/><circle cx="767" cy="316" r="1.8"/>
+        </g>
+        <path class="star-grid-glints" d="M176 68v10m-5-5h10M568 36v12m-6-6h12M74 358v10m-5-5h10M767 310v12m-6-6h12"/>
+      </svg>
+      {% for link in site.links %}
+        {% assign orbit = site.data.home_orbits[link.url] %}
+        {% if orbit %}
+          {% assign destination = link.url | relative_url %}
+          {% if link.url == '/' %}{% assign destination = destination | append: '#about' %}{% endif %}
+          {% assign planet_name = link.title %}
+          {% if link.url == '/' %}{% assign planet_name = 'Me' %}{% endif %}
+          <a class="star-planet star-planet-{{ forloop.index }}"
+            href="{{ destination }}"
+            data-star-planet data-star-index="{{ forloop.index | prepend: '0' }}"
+            data-star-title="{{ planet_name | escape }}" data-star-summary="{{ orbit.summary | escape }}"
+            {% if link.url == '/' %}data-star-profile{% endif %}
+            data-star-accent="{{ orbit.accent }}" style="--planet-accent: {{ orbit.accent }}">
+            <span class="star-planet-orb" aria-hidden="true"></span>
+            <span class="star-planet-name">{{ planet_name | escape }}</span>
+          </a>
+        {% endif %}
+      {% endfor %}
+      <svg class="star-ship" data-star-ship viewBox="0 0 36 38" aria-hidden="true">
+        <path class="star-ship-trail" d="M18 23v13m-4-12-1 7m9-7 1 7"/>
+        <path class="star-ship-hull" d="M18 2 24 13l1 6 5 7-8-2-4 3-4-3-8 2 5-7 1-6Z"/>
+        <path class="star-ship-window" d="m18 9 2.6 6H15.4Z"/>
+      </svg>
+    </nav>
+    <div class="star-preview" data-star-preview hidden style="--star-preview-accent: {{ featured_orbit.accent }}">
+      <p class="star-map-kicker star-preview-kicker"><span aria-hidden="true"></span> Destination <span class="star-preview-index" data-star-preview-index>03</span></p>
+      <button class="star-preview-close" data-star-preview-close type="button" aria-label="Close preview">×</button>
+      <div class="star-preview-copy" data-star-preview-copy aria-live="polite" aria-atomic="true">
+        <h2 data-star-preview-title>Research</h2>
+        <p data-star-preview-summary>{{ featured_orbit.summary | escape }}</p>
+      </div>
+      <div class="star-preview-profile" data-star-preview-profile hidden>{% include author-bio.html %}</div>
+      <a class="star-preview-link" data-star-preview-link href="{{ featured_url | relative_url }}" aria-label="Open page for Research">Open page {% include icon.html name='arrow' %}</a>
+    </div>
+  </div>
+  <div class="star-map-foot">
+    <div class="star-map-meta">
+      {% if site.owner.cv %}<a href="{{ site.owner.cv | relative_url }}">Résumé {% include icon.html name='file' %}</a>{% endif %}
+      {% if page.last_updated %}<span>Updated <time datetime="{{ page.last_updated | date:'%Y-%m-%d' }}">{{ page.last_updated | date:'%b %-d, %Y' }}</time></span>{% endif %}
+    </div>
+    <a class="star-about-link" href="#about">About me <span aria-hidden="true">↓</span></a>
+    <span class="star-map-count" aria-hidden="true">Six destinations</span>
+  </div>
+</section>
