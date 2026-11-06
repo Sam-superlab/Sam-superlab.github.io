@@ -502,16 +502,13 @@ h1,h2,h3 {
 }
 .portrait-image {
   overflow: hidden;
-  aspect-ratio: 1.36;
   border-radius: 16px;
   background: var(--panel);
 }
 .portrait-image img {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: block;
-  object-fit: cover;
-  object-position: center 35%;
 }
 .portrait-caption {
   display: flex;
