@@ -1,0 +1,25 @@
+<aside class="blog-subscribe" id="subscribe" aria-labelledby="blog-subscribe-title">
+  <div class="blog-subscribe-copy">
+    <div class="blog-subscribe-heading">
+      {% include icon.html name='mail' %}
+      <h2 id="blog-subscribe-title">Subscribe by email</h2>
+    </div>
+    <p>Get an email for new posts and major updates.</p>
+  </div>
+  {% if site.blog_subscription_preview %}
+    <form class="blog-subscribe-form" action="#subscribe" data-subscription-preview>
+  {% else %}
+    <form class="blog-subscribe-form" action="{{ subscription_action | escape }}" method="post">
+  {% endif %}
+      <label for="blog-subscribe-email">Email address</label>
+      <div class="blog-subscribe-fields">
+        <input id="blog-subscribe-email" type="email" autocomplete="email" placeholder="you@example.com" required{% unless site.blog_subscription_preview %} name="email"{% endunless %}>
+        <button class="masthead-action masthead-action-primary" type="submit">Subscribe</button>
+      </div>
+      {% if site.blog_subscription_preview %}
+        <p class="blog-subscribe-note" role="status">Local preview only. Your email address won’t be submitted.</p>
+      {% else %}
+        <p class="blog-subscribe-note">Delivered by follow.it. Unsubscribe anytime.</p>
+      {% endif %}
+    </form>
+</aside>

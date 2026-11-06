@@ -26,7 +26,7 @@
   var mouseHover = window.matchMedia('(hover: hover) and (pointer: fine)');
   var reducedTransparency = window.matchMedia('(prefers-reduced-transparency: reduce)');
   var glassSurfaces = document.querySelectorAll(
-    '.site-header, .home-masthead, .sheet-front, .explore-card, .site-footer, .blog-index-details, ' +
+    '.site-header, .home-masthead, .sheet-front, .explore-card, .site-footer, .blog-index-details, .blog-subscribe, ' +
     '.page-projects .content-section, .page-research .content-section:nth-of-type(-n+2)'
   );
   glassSurfaces.forEach(function (surface) {
@@ -55,6 +55,14 @@
     }
     surface.addEventListener('pointerleave', clearLight);
     surface.addEventListener('pointercancel', clearLight);
+  });
+
+  var subscriptionPreview = document.querySelector('[data-subscription-preview]');
+  if (subscriptionPreview) subscriptionPreview.addEventListener('submit', function (event) {
+    event.preventDefault();
+    var note = subscriptionPreview.querySelector('.blog-subscribe-note');
+    note.textContent = 'Preview complete. No email was sent.';
+    subscriptionPreview.reset();
   });
 
   var menu = document.querySelector('.menu-toggle');

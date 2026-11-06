@@ -1,0 +1,6 @@
+# Add an entry only when a public post or update is approved for email.
+# Keep the ID, title, link and date of each announcement stable after it is sent.
+# Give a major update its own ID, title and date. Its URL can include an anchor
+# on the original post. Small edits need no entry.
+# Each entry takes: id, title, url (a site-relative path), date, and summary.
+[]

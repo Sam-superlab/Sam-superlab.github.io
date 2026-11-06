@@ -63,11 +63,20 @@
         <article class="article-wrap" aria-label="{{ page.title | escape }}">
           {% assign sections = body_content | split:'<h2 ' %}
           <div class="page-introduction">{{ sections[0] }}</div>
+          {% assign subscription_action = site.blog_subscription.action | default: '' %}
+          {% if site.blog_subscription_preview or subscription_action != '' %}
+            {% if page_kind == 'blog' %}{% include blog-subscribe.html %}{% endif %}
+          {% endif %}
           {% for section in sections offset:1 %}
           {% assign section_heading = section | split:'>' | first %}
           {% assign section_id = section_heading | split:'id="' | last | split:'"' | first %}
           <section class="content-section{% if page_kind == 'blog' and section_heading contains 'class="timeline-year"' %} blog-year{% endif %}" aria-labelledby="{{ section_id }}"><span class="section-count mono" aria-hidden="true">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span><div class="section-body"><h2 {{ section }}</div></section>
           {% endfor %}
+          {% if site.blog_subscription_preview or subscription_action != '' %}
+            {% if page_kind == 'article' and route contains '/blogs/' %}
+              <p class="blog-subscribe-return"><a href="{{ '/blogs/#subscribe' | relative_url }}">Subscribe by email</a></p>
+            {% endif %}
+          {% endif %}
         </article>
       </div>
       {% if page_kind == 'home' %}

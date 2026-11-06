@@ -1,0 +1,23 @@
+---
+layout: null
+permalink: /blogs/feed.xml
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.title | xml_escape }} · Blog updates</title>
+    <link>{{ '/blogs/' | absolute_url | xml_escape }}</link>
+    <description>New posts and major updates from {{ site.title | xml_escape }}.</description>
+    <atom:link href="{{ '/blogs/feed.xml' | absolute_url | xml_escape }}" rel="self" type="application/rss+xml" />
+    {% assign announcements = site.data.blog_notifications | sort: 'date' | reverse %}
+    {% for entry in announcements %}
+    <item>
+      <title>{{ entry.title | xml_escape }}</title>
+      <link>{{ entry.url | absolute_url | xml_escape }}</link>
+      <description>{{ entry.summary | xml_escape }}</description>
+      <guid isPermaLink="false">{{ site.url | xml_escape }}/blogs/announcements/{{ entry.id | xml_escape }}</guid>
+      <pubDate>{{ entry.date | date_to_rfc822 }}</pubDate>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>
