@@ -1029,6 +1029,9 @@ h1,h2,h3 {
 .page-projects .content-section {
   padding: clamp(24px, 4vw, 40px);
 }
+.page-projects .content-section + .content-section {
+  margin-top: clamp(24px, 4vw, 44px);
+}
 .page-projects .content-section h2 {
   font-size: clamp(29px, 3.5vw, 42px);
 }
