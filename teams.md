@@ -14,6 +14,8 @@ PRISM (Personal Research, Intelligence & Self-Management) is a personal workspac
 
 It also brings workout logs and a daily planner into the same workspace, so I can plan study, research, and training together. PRISM is currently in development for the web, macOS, and iOS.
 
+[Visit the PRISM website](https://sam-superlab.github.io/prism/).
+
 ## Sam's Superlab
 
 I created Sam's Superlab to help students share study notes, techniques, and insights across subjects. The platform brings together student contributors from different disciplines, with teachers reviewing materials for accuracy and usefulness.
