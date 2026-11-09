@@ -811,6 +811,14 @@ h1,h2,h3 {
 .page-article .page-introduction {
   font-size:17px;
 }
+.blog-comments {
+  margin-top: clamp(40px, 6vw, 64px);
+  padding-top: 26px;
+  border-top: 1px solid var(--line);
+}
+.blog-comments h2 {
+  scroll-margin-top: 100px;
+}
 
 /* Keep long reading surfaces calm and frame the featured research separately. */
 .page-research .page-introduction {

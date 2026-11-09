@@ -80,6 +80,14 @@
               <p class="blog-subscribe-return"><a href="{{ '/blogs/#subscribe' | relative_url }}">Subscribe by email</a></p>
             {% endif %}
           {% endif %}
+          {% if route contains '/blogs/' %}
+            {% if page_kind == 'article' or page.comments %}
+              <section class="blog-comments" aria-labelledby="comments">
+                <h2 id="comments">Comments</h2>
+                {% include disqus.html url=route %}
+              </section>
+            {% endif %}
+          {% endif %}
         </article>
       </div>
       {% if page_kind == 'home' and page.home_star_map != true %}

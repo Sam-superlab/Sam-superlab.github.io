@@ -1,8 +1,9 @@
+{% assign discussion_url = include.url | default: '/blogs/' | absolute_url %}
 <div id="disqus_thread"></div>
 <script type="text/javascript">
   var disqus_config = function () {
-    this.page.url = "https://sam-superlab.github.io/blogs/";
-    this.page.identifier = "https://sam-superlab.github.io/blogs/";
+    this.page.url = {{ discussion_url | jsonify }};
+    this.page.identifier = {{ discussion_url | jsonify }};
   };
 
   // You should be able to get the following lines of code from your Disqus admin.
