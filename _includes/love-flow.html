@@ -1,0 +1,27 @@
+{% assign in_chinese = false %}
+{% if include.language == 'zh' %}{% assign in_chinese = true %}{% endif %}
+<figure class="love-figure love-flow" lang="{% if in_chinese %}zh-Hans{% else %}en{% endif %}">
+  <p class="love-flow__heading">{% if in_chinese %}同样的平静，不同的历程{% else %}Two histories that can end in peace{% endif %}</p>
+  <div class="love-flow__endpoint">
+    <span class="love-flow__stage">{% if in_chinese %}起点{% else %}Starting point{% endif %}</span>
+    {% if in_chinese %}一份爱{% else %}A particular romantic love{% endif %}
+  </div>
+  <div class="love-flow__fork" aria-hidden="true"></div>
+  <div class="love-flow__branches">
+    <ol class="love-flow__branch love-flow__branch--dissolution" aria-label="{% if in_chinese %}消解路径{% else %}Path to dissolution{% endif %}">
+      <li>{% if in_chinese %}维系这份爱的牵挂渐渐淡去，或突然中断{% else %}Loss of psychological attachment or responsiveness{% endif %}</li>
+      <li class="love-flow__outcome">{% if in_chinese %}消解（dissolution）{% else %}Dissolution{% endif %}</li>
+    </ol>
+    <ol class="love-flow__branch love-flow__branch--completion" aria-label="{% if in_chinese %}完成路径{% else %}Path to completion{% endif %}">
+      <li>{% if in_chinese %}在哀伤中面对失去{% else %}Facing the loss through grief{% endif %}</li>
+      <li>{% if in_chinese %}慢慢放下那些仍在等待的回应{% else %}Reorganizing expectations and emotional life{% endif %}</li>
+      <li class="love-flow__outcome">{% if in_chinese %}完成（completion）{% else %}Completion{% endif %}</li>
+    </ol>
+  </div>
+  <div class="love-flow__join" aria-hidden="true"></div>
+  <div class="love-flow__endpoint">
+    <span class="love-flow__stage">{% if in_chinese %}可能的共同状态{% else %}Possible shared state{% endif %}</span>
+    {% if in_chinese %}此刻没有经历哀伤{% else %}No grief in the present moment{% endif %}
+  </div>
+  <figcaption>{% if in_chinese %}两个人都可以很平静。他们怎样走到这里，却可能很不一样。{% else %}These paths illustrate a philosophical distinction. A moment of peace cannot tell us which history a person has lived.{% endif %}</figcaption>
+</figure>

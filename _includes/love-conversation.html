@@ -1,0 +1,59 @@
+{% assign in_chinese = false %}
+{% if include.language == 'zh' %}{% assign in_chinese = true %}{% endif %}
+<figure class="love-figure love-conversation" lang="{% if in_chinese %}zh-Hans{% else %}en{% endif %}">
+  <div class="love-conversation__panels">
+    <div class="love-conversation__panel">
+      <svg viewBox="0 0 320 222" width="320" height="222" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+        <rect width="320" height="222" rx="12" fill="#f4edf1"/>
+        <path d="M0 173h320v49H0z" fill="#e9e0e8"/>
+        <path d="M132 25h57v102h-57z" fill="#fbf7f1" stroke="#d7cbd6" stroke-width="2"/>
+        <path d="M160.5 25v102m-28.5-53h57" stroke="#d7cbd6" stroke-width="2"/>
+        <path d="M133 126h55l23 46H110z" fill="#f0e5db" opacity=".66"/>
+        <ellipse cx="160" cy="193" rx="139" ry="12" fill="#cec0d2" opacity=".46"/>
+        <path d="M38 181h52m-47 2-4 18m45-18 4 18m142-20h52m-45 2-4 18m45-18 4 18" fill="none" stroke="#736778" stroke-width="4" stroke-linecap="round"/>
+        <path d="M46 172c0-25 9-41 28-41 16 0 23 13 33 27h27l-1 9H98l-10-10v26H47z" fill="#66658a"/>
+        <path d="M43 173v-23" stroke="#978aa0" stroke-width="5" stroke-linecap="round"/>
+        <path d="M274 172c0-25-9-41-28-41-16 0-23 13-33 27h-27l1 9h35l10-10v26h41z" fill="#a26672"/>
+        <path d="M277 173v-23" stroke="#978aa0" stroke-width="5" stroke-linecap="round"/>
+        <path d="M58 122c-5-19 2-30 16-30 13 0 19 7 19 18l5 9h-6c0 10-5 16-13 16-12 0-18-6-21-13Z" fill="#e8bda7"/>
+        <path d="M57 121c-5-9-3-20 4-27 8-8 24-8 31 4-5 0-10-1-14-3-3 11-10 15-15 16l-1 12Z" fill="#453d58"/>
+        <path d="M262 122c5-19-2-30-16-30-13 0-19 7-19 18l-5 9h6c0 10 5 16 13 16 12 0 18-6 21-13Z" fill="#dba28a"/>
+        <path d="M225 105c-1-15 14-21 26-17 12 3 18 15 15 28l-6 20-10-6c5-14 5-20 2-26-9 2-18 1-27 1Z" fill="#49394b"/>
+        <path d="M110 166h100m-87 1-7 31m81-31 7 31" fill="none" stroke="#78687a" stroke-width="4" stroke-linecap="round"/>
+        <path d="M139 155h10l-1 10h-8zm31 0h10l-1 10h-8z" fill="#f6f1ef" stroke="#9c8294"/>
+        <path d="M80 39h53a11 11 0 0 1 11 11v10a11 11 0 0 1-11 11h-32l-13 13 1-13h-9a11 11 0 0 1-11-11V50a11 11 0 0 1 11-11Z" fill="#fcfbf8" stroke="#746b8e" stroke-width="2"/>
+        <path d="M85 52h42m-42 8h27" stroke="#746b8e" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M186 45h53a11 11 0 0 1 11 11v10a11 11 0 0 1-11 11h-9l1 13-13-13h-32a11 11 0 0 1-11-11V56a11 11 0 0 1 11-11Z" fill="#fcfbf8" stroke="#a16573" stroke-width="2"/>
+        <path d="M192 58h41m-41 8h28" stroke="#a16573" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+      <p class="love-conversation__label">{% if in_chinese %}真实的对话{% else %}A conversation{% endif %}</p>
+      <p class="love-conversation__detail">{% if in_chinese %}回应来自另一个人。{% else %}The reply comes from another person.{% endif %}</p>
+    </div>
+    <div class="love-conversation__panel">
+      <svg viewBox="0 0 320 222" width="320" height="222" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+        <rect width="320" height="222" rx="12" fill="#edf0f6"/>
+        <path d="M0 173h320v49H0z" fill="#e3e8f1"/>
+        <path d="M132 25h57v102h-57z" fill="#f7f5f7" stroke="#ccd1e1" stroke-width="2"/>
+        <path d="M160.5 25v102m-28.5-53h57" stroke="#ccd1e1" stroke-width="2"/>
+        <path d="M133 126h55l23 46H110z" fill="#e8e9f2" opacity=".66"/>
+        <ellipse cx="160" cy="193" rx="139" ry="12" fill="#c6cde0" opacity=".45"/>
+        <path d="M38 181h52m-47 2-4 18m45-18 4 18" fill="none" stroke="#736e87" stroke-width="4" stroke-linecap="round"/>
+        <path d="M230 181h52m-45 2-4 18m45-18 4 18m-4-25v-30" fill="none" stroke="#969db6" stroke-width="4" stroke-linecap="round"/>
+        <path d="M46 172c0-25 9-41 28-41 16 0 23 13 33 27h27l-1 9H98l-10-10v26H47z" fill="#66658a"/>
+        <path d="M43 173v-23" stroke="#978aa0" stroke-width="5" stroke-linecap="round"/>
+        <path d="M58 122c-5-19 2-30 16-30 13 0 19 7 19 18l5 9h-6c0 10-5 16-13 16-12 0-18-6-21-13Z" fill="#e8bda7"/>
+        <path d="M57 121c-5-9-3-20 4-27 8-8 24-8 31 4-5 0-10-1-14-3-3 11-10 15-15 16l-1 12Z" fill="#453d58"/>
+        <path d="M110 166h100m-87 1-7 31m81-31 7 31" fill="none" stroke="#78687a" stroke-width="4" stroke-linecap="round"/>
+        <path d="M139 155h10l-1 10h-8z" fill="#f6f1ef" stroke="#9c8294"/>
+        <circle cx="98" cy="90" r="4" fill="#f5f4f8" stroke="#9294af"/>
+        <circle cx="110" cy="78" r="6" fill="#f5f4f8" stroke="#9294af"/>
+        <path d="M134 70a13 13 0 0 1-4-25 17 17 0 0 1 22-17 18 18 0 0 1 28-3 22 22 0 0 1 32 4 19 19 0 0 1 23 17 15 15 0 0 1-10 27 20 20 0 0 1-24 9 18 18 0 0 1-27 0 21 21 0 0 1-25-5 13 13 0 0 1-15-7Z" fill="#f8f7fa" stroke="#969bb5" stroke-width="2" stroke-dasharray="4 4"/>
+        <path d="M163 40h43a6 6 0 0 1 6 6v10a6 6 0 0 1-6 6h-6l-1 8-10-8h-26a6 6 0 0 1-6-6V46a6 6 0 0 1 6-6Z" fill="#ebeaf2" stroke="#a2a5bd"/>
+        <path d="M166 48h35m-35 6h24" stroke="#a2a5bd" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <p class="love-conversation__label">{% if in_chinese %}回忆中的对话{% else %}A remembered conversation{% endif %}</p>
+      <p class="love-conversation__detail">{% if in_chinese %}回应浮现在回忆里。{% else %}The reply appears within the memory.{% endif %}</p>
+    </div>
+  </div>
+  <figcaption>{% if in_chinese %}记得一个回应，和收到一个回应，是两回事。{% else %}Remembering a response is not the same as receiving one.{% endif %}</figcaption>
+</figure>

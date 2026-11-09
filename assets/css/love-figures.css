@@ -1,0 +1,167 @@
+/* Illustrations for the bilingual essay on grief. */
+.love-figure {
+  --figure-edge: var(--line);
+  --figure-surface: var(--surface);
+  --figure-path: var(--muted);
+  margin: 1.8rem 0;
+}
+.love-figure img,
+.love-conversation svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.love-cover img {
+  border-radius: 15px;
+}
+.love-figure figcaption {
+  margin-top: .85rem;
+  color: var(--muted);
+  font-size: .86rem;
+  line-height: 1.55;
+}
+.love-conversation__panels {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(.5rem, 2vw, 1rem);
+}
+.love-conversation__panel {
+  min-width: 0;
+  padding: clamp(.4rem, 1.4vw, .75rem);
+  border: 1px solid var(--figure-edge);
+  border-radius: 15px;
+  background: var(--figure-surface);
+}
+.article-wrap .love-conversation__label,
+.article-wrap .love-conversation__detail {
+  margin: .6rem .2rem .1rem;
+  line-height: 1.35;
+}
+.love-conversation__label {
+  color: var(--ink);
+  font-size: .96rem;
+  font-weight: 650;
+}
+.article-wrap .love-conversation__detail {
+  margin-top: .2rem;
+  color: var(--muted);
+  font-size: .82rem;
+}
+.love-flow {
+  padding: clamp(.65rem, 3vw, 1.4rem);
+  border: 1px solid var(--figure-edge);
+  border-radius: 15px;
+  background: var(--figure-surface);
+  text-align: center;
+}
+.article-wrap .love-flow__heading {
+  margin: 0 0 1.05rem;
+  color: var(--ink);
+  font-size: clamp(.98rem, 2vw, 1.23rem);
+  font-weight: 650;
+}
+.love-flow__endpoint,
+.love-flow__branch > li {
+  color: var(--ink);
+  border: 1px solid var(--figure-edge);
+  border-radius: 10px;
+  background: var(--panel);
+  padding: .6rem clamp(.25rem, 1.5vw, .65rem);
+  font-size: clamp(.78rem, 1.6vw, .93rem);
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+.love-flow__endpoint {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-inline: .85rem;
+}
+.love-flow__stage {
+  display: block;
+  margin-bottom: .22rem;
+  color: var(--muted);
+  font-size: .72rem;
+}
+.love-flow__fork,
+.love-flow__join {
+  height: 1.9rem;
+  position: relative;
+}
+.love-flow__fork::before,
+.love-flow__join::before {
+  position: absolute;
+  left: 50%;
+  height: 50%;
+  border-left: 1px solid var(--figure-path);
+  content: "";
+}
+.love-flow__fork::after,
+.love-flow__join::after {
+  position: absolute;
+  inset: 50% 25% 0;
+  border: 1px solid var(--figure-path);
+  border-bottom: 0;
+  content: "";
+}
+.love-flow__join::before {
+  bottom: 0;
+}
+.love-flow__join::after {
+  inset: 0 25% 50%;
+  border-top: 0;
+  border-bottom: 1px solid var(--figure-path);
+}
+.love-flow__branches {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(.4rem, 1.5vw, .9rem);
+}
+.article-wrap .love-flow__branch {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.article-wrap .love-flow__branch > li {
+  position: relative;
+  margin: 0;
+  padding: .6rem clamp(.25rem, 1.5vw, .65rem);
+}
+.article-wrap .love-flow__branch > li:not(:last-child)::after {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  translate: -50% 0;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  color: var(--figure-path);
+  content: "↓";
+}
+.article-wrap .love-flow__branch > .love-flow__outcome {
+  margin-top: auto;
+  font-weight: 650;
+}
+.love-flow__branch--dissolution > .love-flow__outcome {
+  background: #ede4f2;
+  color: #452f55;
+}
+.love-flow__branch--completion > .love-flow__outcome {
+  background: #deebeb;
+  color: #1f4146;
+}
+.love-flow__branch--dissolution {
+  position: relative;
+}
+.love-flow__branch--dissolution::before {
+  position: absolute;
+  left: 50%;
+  inset-block: 1rem 1rem;
+  border-left: 1px solid var(--figure-path);
+  content: "";
+}
+.love-flow__branch--dissolution > li:not(:last-child)::after {
+  background: var(--figure-surface);
+}

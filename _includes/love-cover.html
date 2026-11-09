@@ -1,0 +1,8 @@
+{% if include.language == 'zh' %}
+  {% assign cover_alt = '午后的窗边摆着两张空椅子，阳光落在靠近窗户的一张椅子上。' %}
+{% else %}
+  {% assign cover_alt = 'Two empty chairs sit beside a window, with late-afternoon sunlight falling across the nearer seat.' %}
+{% endif %}
+<figure class="love-figure love-cover">
+  <img src="{{ '/assets/images/when-love-ends/cover.jpg' | relative_url }}" width="1536" height="1024" loading="lazy" decoding="async" alt="{{ cover_alt | escape }}">
+</figure>

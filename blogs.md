@@ -10,6 +10,13 @@ comments: true
 
 Personal reflections on mathematics, learning, and life, arranged by date.
 
+## 2026 {#year-2026}
+{: .timeline-year }
+
+### November
+
+- [Grief as the completion of love · 哀伤怎样让一份爱走到终点](/blogs/when-love-ends/)
+
 ## 2024 {#section}
 {: .timeline-year }
 
