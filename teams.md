@@ -2,11 +2,17 @@
 layout: page
 permalink: /teams/index.html
 title: Projects
-description: Sam's Superlab, an educational resource-sharing project created by Xuyi (Sam) Ren.
-last_updated: "2026-11-04"
+description: PRISM, a personal workspace for mathematical study and research, and Sam's Superlab, a platform for sharing study resources.
+last_updated: "2026-11-09"
 ---
 
 # Projects
+
+## PRISM
+
+PRISM (Personal Research, Intelligence & Self-Management) is a personal workspace I'm building for mathematical study and research. I can turn LaTeX notes on definitions, theorems, and proofs into spaced-repetition cards, keep track of conjectures and proof attempts, and save papers from arXiv for later reading.
+
+It also brings workout logs and a daily planner into the same workspace, so I can plan study, research, and training together. PRISM is currently in development for the web, macOS, and iOS.
 
 ## Sam's Superlab
 
